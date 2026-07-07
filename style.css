@@ -1,0 +1,1460 @@
+/* ==========================================================================
+   ACCENTURE TECHVISION 2020 - PRESENTATION DESIGN SYSTEM
+   ========================================================================== */
+
+/* --- 1. GLOBAL VARIABLES & RESET --- */
+:root {
+    --accent-purple: #A100FF;
+    --text-dark: #000000;
+    --text-light: #FFFFFF;
+    --text-gray: #666666;
+    --bg-off-white: #F8F9FA;
+    --slide-width: 1280px;
+    --slide-height: 720px;
+    --font-main: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222;
+    font-family: var(--font-main);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    min-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+}
+
+/* --- 2. BASE SLIDE CONTAINER (16:9) --- */
+.slide-container {
+    width: var(--slide-width);
+    height: var(--slide-height);
+    background-color: var(--text-light);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    scroll-snap-align: center;
+}
+
+/* --- 3. BRAND DECORATIONS --- */
+/* Diagonal Stripes */
+.stripes {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 1.5px,
+        #d3d3d3 1.5px,
+        #d3d3d3 2.5px
+    );
+    z-index: 1;
+}
+.stripes.top-left { top: -80px; left: -80px; }
+.stripes.bottom-right { bottom: -80px; right: -80px; }
+.stripes.bottom-left { bottom: -80px; left: -80px; }
+
+/* Greater-Than (Chevron) Symbol */
+.chevron {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-top: 25px solid var(--accent-purple);
+    border-right: 25px solid var(--accent-purple);
+    transform: rotate(45deg);
+    z-index: 2;
+}
+.chevron.bottom-right { bottom: 100px; right: 100px; }
+
+/* --- 4. HEADER & FOOTER SYSTEMS --- */
+.header-text {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text-gray);
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    padding: 0 60px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-gray);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    z-index: 10;
+}
+.footer-brand {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 0;
+}
+.footer-brand .footer-sep {
+    margin: 0 10px;
+    font-weight: 400;
+    opacity: 0.5;
+}
+.footer-brand .footer-url-inline {
+    font-weight: 400;
+    color: var(--text-gray);
+}
+.footer-page { text-align: right; color: var(--text-dark); font-size: 14px; }
+
+/* --- 5. TYPOGRAPHY & CONTENT WRAPPER --- */
+.content-main {
+    flex-grow: 1;
+    padding: 100px 60px 80px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+}
+.flex-center {
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 72px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--text-dark);
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 56px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+p.subtitle {
+    font-size: 24px;
+    line-height: 1.4;
+    color: var(--text-dark);
+    max-width: 800px;
+}
+
+.accent-bar {
+    width: 100px;
+    height: 8px;
+    background-color: var(--accent-purple);
+    margin-bottom: 30px;
+}
+
+/* --- 6. LAYOUT COMPONENTS --- */
+/* Split Content Layout */
+.hero-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    gap: 60px;
+    align-items: center;
+}
+.hero-split p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-gray);
+}
+
+.placeholder-box {
+    background-color: var(--bg-off-white);
+    height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #ccc;
+    color: #aaa;
+    font-weight: 700;
+    position: relative;
+}
+
+/* 3-Column Grid Layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+.card {
+    padding: 30px;
+    background-color: var(--bg-off-white);
+    border-left: 5px solid var(--accent-purple);
+}
+.card h3 { 
+    font-size: 20px; 
+    margin-bottom: 15px; 
+    color: var(--accent-purple); 
+}
+.card p { 
+    font-size: 14px; 
+    line-height: 1.5; 
+    color: var(--text-dark); 
+}
+
+/* ============================================================
+   SLIDES 13–17
+   ============================================================ */
+
+/* --- SLIDE 13: Full purple — large white headline + body --- */
+.slide-s13 {
+    background-color: #A100FF;
+    position: relative;
+}
+.s13-badge {
+    position: absolute; top: 32px; left: 40px;
+    background-color: rgba(255,255,255,0.18); color: #fff;
+    font-size: 13px; font-weight: 700; padding: 8px 18px;
+    z-index: 20;
+}
+.s13-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #fff;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s13-content {
+    position: absolute;
+    top: 90px; left: 60px; right: 60px; bottom: 85px;
+    display: flex; flex-direction: column;
+    justify-content: center; z-index: 5;
+}
+.s13-headline {
+    font-size: 44px; font-weight: 800;
+    color: #fff; line-height: 1.2;
+    margin: 0 0 32px 0; max-width: 900px;
+}
+.s13-body {
+    font-size: 14px; line-height: 1.7;
+    color: rgba(255,255,255,0.88); margin: 0;
+    max-width: 680px;
+}
+.s13-footer {
+    border-top-color: rgba(255,255,255,0.2) !important;
+}
+.s13-footer .footer-brand,
+.s13-footer .footer-url-inline,
+.s13-footer .footer-sep,
+.s13-footer .footer-page {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* --- SLIDE 14: White split — purple headline left, case study right --- */
+.slide-s14 {
+    background-color: #fff;
+    flex-direction: row;
+    position: relative;
+}
+.s14-badge {
+    position: absolute; top: 32px; left: 40px;
+    background-color: var(--accent-purple); color: #fff;
+    font-size: 13px; font-weight: 700; padding: 8px 18px;
+    z-index: 20;
+}
+.s14-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #222;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s14-stripes {
+    position: absolute;
+    bottom: 55px; left: -60px;
+    width: 320px; height: 220px;
+    background: repeating-linear-gradient(
+        45deg, transparent, transparent 1.5px,
+        #d3d3d3 1.5px, #d3d3d3 2.5px
+    );
+    z-index: 1;
+}
+.s14-left {
+    position: relative;
+    width: 52%; height: 100%;
+    flex-shrink: 0;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 90px 50px 90px 60px;
+    z-index: 5;
+}
+.s14-headline {
+    font-size: 34px; font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.25; margin: 0;
+}
+.s14-right {
+    flex: 1; height: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 90px 60px 90px 50px;
+    border-left: 1px solid #eee;
+}
+.s14-case-title {
+    font-size: 20px; font-weight: 800;
+    color: #111; margin: 0 0 16px 0;
+}
+.s14-case-body {
+    font-size: 14px; line-height: 1.7;
+    color: #333; margin: 0;
+}
+
+/* --- SLIDE 15: White — purple headline + 3-col action bullets + stripes --- */
+.slide-s15 {
+    background-color: #fff;
+    position: relative;
+}
+.s15-badge {
+    position: absolute; top: 32px; left: 40px;
+    background-color: var(--accent-purple); color: #fff;
+    font-size: 13px; font-weight: 700; padding: 8px 18px;
+    z-index: 20;
+}
+.s15-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #222;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s15-stripes {
+    position: absolute;
+    bottom: 55px; right: -60px;
+    width: 320px; height: 260px;
+    background: repeating-linear-gradient(
+        45deg, transparent, transparent 1.5px,
+        #d3d3d3 1.5px, #d3d3d3 2.5px
+    );
+    z-index: 1;
+}
+.s15-content {
+    position: absolute;
+    top: 85px; left: 60px; right: 80px; bottom: 85px;
+    display: flex; flex-direction: column;
+    justify-content: space-between; z-index: 5;
+}
+.s15-headline {
+    font-size: 42px; font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.2; margin: 0 0 36px 0;
+}
+.s15-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+}
+.s15-col-title {
+    font-size: 18px; font-weight: 800;
+    color: #111; margin: 0 0 12px 0;
+    line-height: 1.3;
+}
+.s15-col-bar {
+    width: 3px; height: 60px;
+    background-color: var(--accent-purple);
+    margin-bottom: 14px;
+}
+.s15-col-body {
+    font-size: 13px; line-height: 1.65;
+    color: #333; margin: 0;
+}
+
+/* --- SLIDE 16: Full purple — 5-column icon grid --- */
+.slide-s16 {
+    background-color: #A100FF;
+    position: relative;
+}
+.s16-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #fff;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s16-content {
+    position: absolute;
+    top: 60px; left: 60px; right: 60px; bottom: 85px;
+    display: flex; flex-direction: column;
+    z-index: 5;
+}
+.s16-title {
+    font-size: 44px; font-weight: 800;
+    color: #fff; margin: 0 0 8px 0;
+}
+.s16-subtitle {
+    font-size: 20px; font-weight: 700;
+    color: var(--accent-purple);
+    background-color: #fff;
+    display: inline-block;
+    padding: 2px 0;
+    margin: 0 0 50px 0;
+}
+.s16-grid {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    gap: 0;
+}
+.s16-item {
+    flex: 1;
+    padding: 0 24px 0 0;
+}
+.s16-icon {
+    font-size: 36px; color: #fff;
+    margin-bottom: 14px; line-height: 1;
+}
+.s16-item-title {
+    font-size: 16px; font-weight: 800;
+    color: #fff; margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+.s16-item-body {
+    font-size: 13px; line-height: 1.6;
+    color: rgba(255,255,255,0.85); margin: 0;
+}
+.s16-divider {
+    width: 1px;
+    background-color: rgba(255,255,255,0.3);
+    align-self: stretch;
+    margin: 0 24px 0 0;
+    flex-shrink: 0;
+}
+.s16-footer {
+    border-top-color: rgba(255,255,255,0.2) !important;
+}
+.s16-footer .footer-brand,
+.s16-footer .footer-url-inline,
+.s16-footer .footer-sep,
+.s16-footer .footer-page {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* --- SLIDE 17: Light teal full-bleed — Thank You --- */
+.slide-s17 {
+    background: linear-gradient(120deg, #b8eaf5 0%, #d4f5fc 40%, #e8fafe 70%, #f0fbff 100%);
+    position: relative; overflow: hidden;
+    flex-direction: row;
+}
+.s17-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.3) 45%, transparent 100%);
+    z-index: 2;
+}
+/* Decorative stacked rects on right */
+.s17-deco {
+    position: absolute;
+    right: 80px; top: 60px; bottom: 60px;
+    width: 42%;
+    z-index: 3;
+}
+.s17-rect {
+    position: absolute; border-radius: 2px;
+}
+.s17-rect-1 {
+    width: 260px; height: 420px;
+    background-color: rgba(255,255,255,0.50);
+    top: 30px; right: 0; transform: rotate(-4deg);
+}
+.s17-rect-2 {
+    width: 260px; height: 420px;
+    background-color: rgba(255,255,255,0.35);
+    top: 60px; right: 70px; transform: rotate(1deg);
+}
+.s17-rect-3 {
+    width: 260px; height: 420px;
+    background-color: rgba(255,255,255,0.20);
+    top: 90px; right: 140px; transform: rotate(5deg);
+}
+/* Left content */
+.s17-content {
+    position: absolute;
+    left: 60px; top: 50%;
+    transform: translateY(-55%);
+    z-index: 10;
+}
+.s17-thankyou {
+    font-size: 90px; font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1; margin: 0 0 30px 0;
+}
+.s17-hashtag-text {
+    font-size: 16px; font-weight: 800;
+    color: #111; margin: 0 0 8px 0;
+}
+.s17-link {
+    font-size: 16px; font-weight: 700;
+    color: #111; margin: 0;
+    text-decoration: underline;
+}
+/* Bottom copyright */
+.s17-copyright {
+    position: absolute;
+    bottom: 24px; left: 60px;
+    font-size: 11px; color: #555;
+    z-index: 10;
+}
+
+/* ============================================================
+   SLIDES 9–12
+   ============================================================ */
+
+/* --- SLIDE 9: Dark navy full-bleed --- */
+.slide-s9 {
+    background: linear-gradient(120deg, #0a0f1e 0%, #0c1535 50%, #12082a 100%);
+    position: relative; overflow: hidden;
+}
+.s9-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.6) 38%, transparent 100%);
+    z-index: 2;
+}
+.s9-badge {
+    position: absolute; top: 32px; left: 40px;
+    background-color: #2a2a2a; color: #fff;
+    font-size: 13px; font-weight: 700; padding: 8px 18px;
+    z-index: 20; letter-spacing: 0.2px;
+}
+.s9-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #fff;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s9-content {
+    position: absolute;
+    bottom: 110px; left: 60px;
+    max-width: 500px; z-index: 10;
+}
+.s9-headline {
+    font-size: 44px; font-weight: 800;
+    color: #fff; line-height: 1.15; margin: 0 0 24px 0;
+}
+.s9-body {
+    font-size: 15px; line-height: 1.65;
+    color: rgba(255,255,255,0.82); margin: 0;
+}
+.s9-footer {
+    border-top-color: rgba(255,255,255,0.12) !important;
+}
+.s9-footer .footer-brand,
+.s9-footer .footer-url-inline,
+.s9-footer .footer-sep,
+.s9-footer .footer-page {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* --- SLIDE 10: White — purple headline + bullets left, rects right --- */
+.slide-s10 {
+    background-color: #fff;
+    flex-direction: row;
+    position: relative;
+}
+.s10-badge {
+    position: absolute; top: 32px; left: 40px;
+    background-color: var(--accent-purple); color: #fff;
+    font-size: 13px; font-weight: 700; padding: 8px 18px;
+    z-index: 20;
+}
+.s10-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #222;
+    z-index: 20; letter-spacing: 0.5px;
+}
+/* Diagonal stripes top-left */
+.s10-stripes {
+    position: absolute;
+    top: -60px; left: -60px;
+    width: 240px; height: 240px;
+    background: repeating-linear-gradient(
+        45deg, transparent, transparent 1.5px,
+        #d3d3d3 1.5px, #d3d3d3 2.5px
+    );
+    z-index: 1;
+}
+.s10-left {
+    position: relative;
+    width: 58%; height: 100%;
+    flex-shrink: 0;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 90px 50px 90px 60px;
+    z-index: 5;
+}
+.s10-headline {
+    font-size: 36px; font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.2; margin: 0 0 20px 0;
+}
+.s10-body {
+    font-size: 14px; line-height: 1.65;
+    color: #333; margin: 0 0 24px 0;
+}
+.s10-bullets {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+}
+.s10-bullet {
+    font-size: 13px; line-height: 1.6; color: #333;
+    border-left: 3px solid var(--accent-purple);
+    padding-left: 12px;
+}
+.s10-right {
+    flex: 1; height: 100%;
+    background-color: #f0f0f0;
+    position: relative; overflow: hidden;
+}
+.s10-rect {
+    position: absolute; border-radius: 2px;
+}
+.s10-rect-1 {
+    width: 200px; height: 320px;
+    background-color: rgba(200,200,200,0.5);
+    top: 80px; right: 100px; transform: rotate(-6deg);
+}
+.s10-rect-2 {
+    width: 200px; height: 320px;
+    background-color: rgba(180,180,180,0.35);
+    top: 110px; right: 30px; transform: rotate(0deg);
+}
+.s10-rect-3 {
+    width: 200px; height: 320px;
+    background-color: rgba(160,160,160,0.2);
+    top: 140px; right: -40px; transform: rotate(6deg);
+}
+
+/* --- SLIDE 11: White — rects+dots left, purple headline right --- */
+.slide-s11 {
+    background-color: #fff;
+    flex-direction: row;
+    position: relative;
+}
+.s11-badge {
+    position: absolute; top: 32px; left: 40px;
+    background-color: var(--accent-purple); color: #fff;
+    font-size: 13px; font-weight: 700; padding: 8px 18px;
+    z-index: 20;
+}
+.s11-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #222;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s11-left {
+    position: relative;
+    width: 44%; height: 100%;
+    flex-shrink: 0;
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+.s11-rect {
+    position: absolute; border-radius: 2px;
+}
+.s11-rect-1 {
+    width: 220px; height: 360px;
+    background-color: rgba(200,200,200,0.30);
+    top: 70px; left: 20px; transform: rotate(-8deg);
+}
+.s11-rect-2 {
+    width: 220px; height: 360px;
+    background-color: rgba(180,180,180,0.20);
+    top: 100px; left: 100px; transform: rotate(-1deg);
+}
+.s11-rect-3 {
+    width: 220px; height: 360px;
+    background-color: rgba(160,160,160,0.12);
+    top: 130px; left: 180px; transform: rotate(6deg);
+}
+/* Dot navigation row */
+.s11-dots {
+    position: absolute;
+    bottom: 95px; left: 30px;
+    display: flex; gap: 8px; flex-wrap: wrap;
+    max-width: 200px;
+    z-index: 10;
+}
+.s11-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background-color: rgba(0,0,0,0.18); display: inline-block;
+}
+.s11-dot-active {
+    background-color: rgba(0,0,0,0.5);
+}
+.s11-right {
+    flex: 1; height: 100%;
+    background-color: #fff;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 100px 60px;
+}
+.s11-headline {
+    font-size: 42px; font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.2; margin: 0 0 24px 0;
+}
+.s11-body {
+    font-size: 16px; line-height: 1.7;
+    color: #333; margin: 0; max-width: 480px;
+}
+
+/* --- SLIDE 12: White — purple headline+body left, rects right --- */
+.slide-s12 {
+    background-color: #fff;
+    flex-direction: row;
+    position: relative;
+}
+.s12-badge {
+    position: absolute; top: 32px; left: 40px;
+    background-color: var(--accent-purple); color: #fff;
+    font-size: 13px; font-weight: 700; padding: 8px 18px;
+    z-index: 20;
+}
+.s12-hashtag {
+    position: absolute; top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700; color: #222;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s12-left {
+    position: relative;
+    width: 56%; height: 100%;
+    flex-shrink: 0;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    padding: 90px 50px 90px 60px;
+    z-index: 5;
+}
+.s12-headline {
+    font-size: 38px; font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.2; margin: 0 0 24px 0;
+}
+.s12-body {
+    font-size: 14px; line-height: 1.7;
+    color: #333; margin: 0;
+}
+.s12-right {
+    flex: 1; height: 100%;
+    background-color: #f5f5f5;
+    position: relative; overflow: hidden;
+}
+.s12-rect {
+    position: absolute; border-radius: 2px;
+}
+.s12-rect-1 {
+    width: 200px; height: 320px;
+    background-color: rgba(210,210,210,0.45);
+    top: 90px; left: 20px; transform: rotate(-6deg);
+}
+.s12-rect-2 {
+    width: 200px; height: 320px;
+    background-color: rgba(190,190,190,0.30);
+    top: 120px; left: 95px; transform: rotate(1deg);
+}
+.s12-rect-3 {
+    width: 200px; height: 320px;
+    background-color: rgba(170,170,170,0.18);
+    top: 150px; left: 170px; transform: rotate(7deg);
+}
+
+/* ============================================================
+   SLIDES 5–8
+   ============================================================ */
+
+/* --- SLIDE 5: Dark blue full-bleed --- */
+.slide-s5 {
+    background: linear-gradient(135deg, #0a0a2e 0%, #0d1b4b 40%, #1a0a3a 100%);
+    position: relative;
+    overflow: hidden;
+}
+.s5-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.55) 40%, transparent 100%);
+    z-index: 2;
+}
+.s5-badge {
+    position: absolute;
+    top: 32px; left: 40px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 13px; font-weight: 700;
+    padding: 8px 18px;
+    z-index: 20; letter-spacing: 0.2px;
+}
+.s5-hashtag {
+    position: absolute;
+    top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700;
+    color: #fff;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s5-content {
+    position: absolute;
+    bottom: 110px; left: 60px;
+    max-width: 520px;
+    z-index: 10;
+}
+.s5-headline {
+    font-size: 44px; font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2; margin: 0;
+}
+.s5-footer {
+    border-top-color: rgba(255,255,255,0.15) !important;
+}
+.s5-footer .footer-brand,
+.s5-footer .footer-url-inline,
+.s5-footer .footer-sep,
+.s5-footer .footer-page {
+    color: rgba(255,255,255,0.65) !important;
+}
+
+/* --- SLIDE 6: Full bright purple — Tech-lash --- */
+.slide-s6 {
+    background-color: #A100FF;
+    position: relative;
+}
+.s6-badge {
+    position: absolute;
+    top: 32px; left: 40px;
+    background-color: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 13px; font-weight: 700;
+    padding: 8px 18px;
+    z-index: 20; letter-spacing: 0.2px;
+}
+.s6-hashtag {
+    position: absolute;
+    top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700;
+    color: #fff;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s6-content {
+    position: absolute;
+    top: 90px; left: 60px; right: 60px; bottom: 85px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+}
+.s6-headline {
+    font-size: 38px; font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2; margin: 0 0 40px 0;
+    max-width: 900px;
+}
+.s6-cols {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.s6-col-title {
+    font-size: 24px; font-weight: 800;
+    color: #4a0080;
+    margin-bottom: 12px;
+}
+.s6-col-body {
+    font-size: 15px; line-height: 1.6;
+    color: rgba(255,255,255,0.9);
+    margin: 0;
+}
+.s6-footer {
+    border-top-color: rgba(255,255,255,0.2) !important;
+}
+.s6-footer .footer-brand,
+.s6-footer .footer-url-inline,
+.s6-footer .footer-sep,
+.s6-footer .footer-page {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* --- SLIDE 7: Full bright purple — Stats --- */
+.slide-s7 {
+    background-color: #A100FF;
+    position: relative;
+}
+.s7-badge {
+    position: absolute;
+    top: 32px; left: 40px;
+    background-color: rgba(255,255,255,0.18);
+    color: #fff;
+    font-size: 13px; font-weight: 700;
+    padding: 8px 18px;
+    z-index: 20; letter-spacing: 0.2px;
+}
+.s7-hashtag {
+    position: absolute;
+    top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700;
+    color: #fff;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s7-content {
+    position: absolute;
+    top: 90px; left: 60px; right: 60px; bottom: 85px;
+    display: flex; flex-direction: column;
+    justify-content: space-between;
+    z-index: 5;
+}
+.s7-headline {
+    font-size: 38px; font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2; margin: 0 0 36px 0;
+    max-width: 900px;
+}
+.s7-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+.s7-stat-number {
+    font-size: 58px; font-weight: 800;
+    color: #2d0060;
+    line-height: 1; margin-bottom: 14px;
+}
+.s7-stat-body {
+    font-size: 15px; line-height: 1.6;
+    color: rgba(255,255,255,0.92);
+    margin: 0 0 10px 0;
+}
+.s7-stat-cite {
+    font-size: 11px; line-height: 1.4;
+    color: rgba(255,255,255,0.55);
+    margin: 0;
+}
+.s7-footer {
+    border-top-color: rgba(255,255,255,0.2) !important;
+}
+.s7-footer .footer-brand,
+.s7-footer .footer-url-inline,
+.s7-footer .footer-sep,
+.s7-footer .footer-page {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* --- SLIDE 8: White — stacked purple rects left, purple headline right --- */
+.slide-s8 {
+    background-color: #ffffff;
+    flex-direction: row;
+}
+.s8-badge {
+    position: absolute;
+    top: 32px; left: 40px;
+    background-color: var(--accent-purple);
+    color: #fff;
+    font-size: 13px; font-weight: 700;
+    padding: 8px 18px;
+    z-index: 20; letter-spacing: 0.2px;
+}
+.s8-hashtag {
+    position: absolute;
+    top: 36px; right: 50px;
+    font-size: 13px; font-weight: 700;
+    color: #222;
+    z-index: 20; letter-spacing: 0.5px;
+}
+.s8-left {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    background-color: #f5f5f5;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.s8-rect {
+    position: absolute;
+    border-radius: 2px;
+}
+.s8-rect-1 {
+    width: 220px; height: 340px;
+    background: linear-gradient(135deg, rgba(161,0,255,0.25), rgba(100,0,180,0.15));
+    top: 100px; left: 20px;
+    transform: rotate(-7deg);
+}
+.s8-rect-2 {
+    width: 220px; height: 340px;
+    background: linear-gradient(135deg, rgba(161,0,255,0.18), rgba(80,0,160,0.10));
+    top: 130px; left: 95px;
+    transform: rotate(-1deg);
+}
+.s8-rect-3 {
+    width: 220px; height: 340px;
+    background: linear-gradient(135deg, rgba(161,0,255,0.12), rgba(60,0,140,0.07));
+    top: 160px; left: 170px;
+    transform: rotate(5deg);
+}
+.s8-right {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 100px 70px;
+}
+.s8-headline {
+    font-size: 38px; font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.25; margin: 0;
+}
+
+/* --- 7. SLIDE 4 — White Full-Text Purple Layout --- */
+.slide-s4 {
+    background-color: #ffffff;
+    position: relative;
+}
+
+/* Purple badge top-left (same style as slide 2) */
+.s4-badge {
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    background-color: var(--accent-purple);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    z-index: 20;
+    letter-spacing: 0.2px;
+}
+
+/* Dark hashtag top-right */
+.s4-hashtag {
+    position: absolute;
+    top: 36px;
+    right: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    z-index: 20;
+    letter-spacing: 0.5px;
+}
+
+/* Diagonal stripes — bottom-left corner */
+.s4-stripes {
+    bottom: 60px;
+    left: -60px;
+    top: auto;
+    width: 380px;
+    height: 280px;
+    z-index: 1;
+}
+
+/* Main content area */
+.s4-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    padding: 0 80px 0 170px;
+    z-index: 5;
+}
+
+/* Large bold purple headline */
+.s4-headline {
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.25;
+    margin: 0;
+    max-width: 820px;
+}
+
+/* --- 8. SLIDE 3 — Dark Two-Column Layout (no photo) --- */
+.slide-s3 {
+    background-color: #000000;
+    flex-direction: row;
+}
+
+/* Dark grey badge top-left */
+.s3-badge {
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    z-index: 20;
+    letter-spacing: 0.2px;
+}
+
+/* White hashtag top-right */
+.s3-hashtag {
+    position: absolute;
+    top: 36px;
+    right: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ffffff;
+    z-index: 20;
+    letter-spacing: 0.5px;
+}
+
+/* Left text panel */
+.s3-left {
+    position: relative;
+    width: 55%;
+    height: 100%;
+    background-color: #000000;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 60px 100px 60px;
+}
+
+/* Large bold white headline */
+.s3-headline {
+    font-size: 44px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* Right decorative panel */
+.s3-right {
+    flex: 1;
+    height: 100%;
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    margin: 55px 40px 80px 0;
+    border-radius: 2px;
+}
+
+/* Decorative box (photo replacement) */
+.s3-deco-box {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Large circle outline */
+.s3-circle-outer {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border: 3px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+/* Inner circle */
+.s3-circle-inner {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 2px solid rgba(255,255,255,0.08);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+}
+
+/* Silhouette bar at bottom */
+.s3-silhouette {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 35%;
+    background: linear-gradient(to top, rgba(30,30,30,0.9), transparent);
+}
+
+/* Dark slide footer overrides */
+.s3-footer {
+    background-color: transparent;
+    border-top-color: rgba(255,255,255,0.1);
+    color: #888 !important;
+}
+.s3-footer .footer-brand,
+.s3-footer .footer-url-inline,
+.s3-footer .footer-sep {
+    color: #888 !important;
+}
+.s3-footer .footer-page {
+    color: #888 !important;
+}
+
+/* --- 8. SLIDE 2 — Image-Style Layout (no photo) --- */
+.slide-s2 {
+    background-color: #ffffff;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* Purple badge top-left */
+.s2-badge {
+    position: absolute;
+    top: 32px;
+    left: 40px;
+    background-color: var(--accent-purple);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 18px;
+    z-index: 20;
+    letter-spacing: 0.2px;
+}
+
+/* Hashtag top-right */
+.s2-hashtag {
+    position: absolute;
+    top: 36px;
+    right: 50px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    z-index: 20;
+    letter-spacing: 0.5px;
+}
+
+/* Left decorative panel */
+.s2-left {
+    position: relative;
+    width: 38%;
+    height: 100%;
+    background-color: #f8f8f8;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Stacked tilted rectangles */
+.s2-rect {
+    position: absolute;
+    border-radius: 2px;
+}
+.s2-rect-1 {
+    width: 210px;
+    height: 340px;
+    background-color: rgba(170, 155, 140, 0.30);
+    top: 100px;
+    left: 20px;
+    transform: rotate(-7deg);
+}
+.s2-rect-2 {
+    width: 210px;
+    height: 340px;
+    background-color: rgba(150, 135, 120, 0.22);
+    top: 130px;
+    left: 90px;
+    transform: rotate(-1deg);
+}
+.s2-rect-3 {
+    width: 210px;
+    height: 340px;
+    background-color: rgba(130, 115, 100, 0.15);
+    top: 160px;
+    left: 165px;
+    transform: rotate(5deg);
+}
+
+/* Right text panel */
+.s2-right {
+    flex: 1;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 60px 100px 70px;
+}
+
+/* Large purple question headline */
+.s2-headline {
+    font-size: 42px;
+    font-weight: 800;
+    color: var(--accent-purple);
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* --- 8. COVER SLIDE (Slide 1) --- */
+.slide-cover {
+    background-color: #f0f0f0;
+    flex-direction: row;
+}
+
+/* Left white/light panel with logo + decorative rects */
+.cover-left-panel {
+    position: relative;
+    width: 42%;
+    height: 100%;
+    background-color: #f0f0f0;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+/* Accenture Logo */
+.cover-logo {
+    position: absolute;
+    top: 40px;
+    left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 10;
+}
+.logo-chevron {
+    font-size: 38px;
+    line-height: 1;
+    color: var(--accent-purple);
+    font-weight: 900;
+}
+.logo-text {
+    font-size: 26px;
+    font-weight: 700;
+    color: #000;
+    letter-spacing: -0.5px;
+}
+
+/* Stacked decorative rectangles */
+.cover-rect {
+    position: absolute;
+    border-radius: 2px;
+}
+.rect-1 {
+    width: 220px;
+    height: 320px;
+    background-color: rgba(180, 160, 140, 0.35);
+    top: 120px;
+    left: 30px;
+    transform: rotate(-8deg);
+}
+.rect-2 {
+    width: 220px;
+    height: 320px;
+    background-color: rgba(160, 140, 120, 0.25);
+    top: 150px;
+    left: 100px;
+    transform: rotate(-2deg);
+}
+.rect-3 {
+    width: 220px;
+    height: 320px;
+    background-color: rgba(140, 120, 100, 0.18);
+    top: 180px;
+    left: 180px;
+    transform: rotate(4deg);
+}
+
+/* Right dark panel with text */
+.cover-right-panel {
+    flex: 1;
+    height: 100%;
+    background-color: #3a3a3a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 60px 100px 70px;
+    z-index: 5;
+}
+
+.cover-eyebrow {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 1px;
+    margin-bottom: 18px;
+}
+
+.cover-headline {
+    font-size: 72px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.0;
+    margin-bottom: 24px;
+    letter-spacing: -1px;
+}
+
+.cover-tagline {
+    font-size: 18px;
+    color: rgba(255,255,255,0.85);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* Cover Slide Footer */
+.cover-footer {
+    background-color: #f0f0f0;
+    border-top: 1px solid #ddd;
+    color: #333 !important;
+    grid-template-columns: 1fr auto 1fr;
+}
+.cover-footer .footer-brand {
+    color: #444;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* "INTO THE NEW" branding */
+.footer-into {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: right;
+    justify-content: flex-end;
+}
+.into-icon {
+    font-size: 22px;
+    color: var(--accent-purple);
+}
+.into-text {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--accent-purple);
+    letter-spacing: 0.5px;
+}
+.into-text strong {
+    font-weight: 900;
+}
+
+/* --- 8. THEMES --- */
+/* Dark Mode Override */
+.slide-dark { 
+    background-color: #000; 
+}
+.slide-dark .header-text, 
+.slide-dark .footer, 
+.slide-dark .footer-url { 
+    color: #888; 
+}
+.slide-dark h1, 
+.slide-dark .section-title, 
+.slide-dark p.subtitle, 
+.slide-dark .footer-page { 
+    color: #FFF; 
+}
+.slide-dark .footer { 
+    border-top-color: rgba(255,255,255,0.1); 
+}

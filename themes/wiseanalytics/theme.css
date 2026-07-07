@@ -1,0 +1,138 @@
+/* ==========================================================================
+   WISEANALYTICS DESIGN SYSTEM — THEME ENTRY POINT
+   
+   Import this single file to apply the full WiseAnalytics brand theme.
+   
+   Usage in any slide HTML:
+     <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="themes/wiseanalytics/theme.css">
+   
+   The theme is additive — it does NOT remove or override slide layouts.
+   It rebrands all CSS custom properties to WiseAnalytics values.
+   ========================================================================== */
+
+/* --- 1. Google Fonts: Inter (400, 500, 600, 700, 800, 900) --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* --- 2. Design Tokens — must load first (all others reference these) --- */
+@import './variables.css';
+
+/* --- 3. Color Palette --- */
+@import './colors.css';
+
+/* --- 4. Typography Scale --- */
+@import './typography.css';
+
+/* --- 5. Spacing, Radius, Shadows --- */
+@import './spacing.css';
+
+/* --- 6. Component Library --- */
+@import './components.css';
+
+/* --- 7. Header Component --- */
+@import './header.css';
+
+/* --- 8. Footer Component (includes copyright: © 2026 WiseAnalytics.) --- */
+@import './footer.css';
+
+/* --- 9. Utilities & Metadata Annotations --- */
+@import './utilities.css';
+
+/* ==========================================================================
+   THEME-LEVEL GLOBAL OVERRIDES
+   Applied only when this theme is loaded. These work because CSS
+   variables cascade — existing slide rules that use var(--accent-purple)
+   automatically pick up the WiseAnalytics value from variables.css.
+   
+   The overrides below handle the remaining hardcoded values in style.css
+   that do NOT use CSS variables (e.g., #A100FF, #4a0080, #2d0060).
+   This completes the rebrand without touching style.css.
+   ========================================================================== */
+
+/* --- Hardcoded purple accent overrides (Accenture → WiseAnalytics) --- */
+
+/* Slides 6 & 7: column titles and stat numbers used deep purple hex values */
+.s6-col-title   { color: var(--wa-primary-700) !important; }
+.s7-stat-number { color: var(--wa-primary-700) !important; }
+
+/* Slides 6 & 7: bright purple background (#A100FF → WA primary) */
+.slide-s6,
+.slide-s7,
+.slide-s13,
+.slide-s16 {
+    background-color: var(--wa-primary) !important;
+}
+
+/* Slide 3: pure black background → very dark navy for WA */
+.slide-s3 {
+    background-color: var(--wa-gray-900) !important;
+}
+.s3-left {
+    background-color: var(--wa-gray-900) !important;
+}
+.s3-right {
+    background-color: var(--wa-gray-800) !important;
+}
+.s3-headline { color: var(--wa-white) !important; }
+
+/* Slide 5: dark blue → WA deep gradient */
+.slide-s5 {
+    background: linear-gradient(135deg,
+        var(--wa-secondary-900) 0%,
+        var(--wa-secondary-800) 40%,
+        var(--wa-primary-900) 100%
+    ) !important;
+}
+
+/* Slide 9: dark navy → WA deep gradient */
+.slide-s9 {
+    background: linear-gradient(120deg,
+        var(--wa-gray-900) 0%,
+        var(--wa-secondary-900) 50%,
+        var(--wa-primary-900) 100%
+    ) !important;
+}
+
+/* Slide 17 (Thank You): teal gradient → WA light purple gradient */
+.slide-s17 {
+    background: linear-gradient(120deg,
+        var(--wa-primary-50) 0%,
+        var(--wa-secondary-50) 40%,
+        var(--wa-gray-50) 100%
+    ) !important;
+}
+.s17-thankyou { color: var(--wa-primary) !important; }
+
+/* Cover slide right panel: dark grey → WA deep primary */
+.cover-right-panel {
+    background-color: var(--wa-primary-900) !important;
+}
+
+/* Cover "INTO THE NEW" branding remapped to WA */
+.into-icon  { color: var(--wa-primary-300) !important; }
+.into-text  { color: var(--wa-white) !important; }
+
+/* Existing dark mode slide class — remap to WA dark palette */
+.slide-dark { background-color: var(--wa-gray-900) !important; }
+.slide-dark h1,
+.slide-dark .section-title,
+.slide-dark p.subtitle { color: var(--wa-white) !important; }
+
+/* ======================================================================
+   DARK THEME — Full slide collection dark mode
+   Toggle: <html data-theme="dark">
+   ====================================================================== */
+[data-theme="dark"] .slide-container {
+    background-color: var(--wa-bg-slide, #0E0E1A);
+}
+[data-theme="dark"] .footer {
+    border-top-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="dark"] .footer-brand,
+[data-theme="dark"] .footer-url-inline,
+[data-theme="dark"] .footer-sep {
+    color: rgba(255, 255, 255, 0.45) !important;
+}
+[data-theme="dark"] .footer-page {
+    color: rgba(255, 255, 255, 0.7) !important;
+}

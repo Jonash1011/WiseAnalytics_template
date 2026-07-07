@@ -1,0 +1,214 @@
+/* ==========================================================================
+   WISEANALYTICS DESIGN SYSTEM — FOOTER
+   Reusable slide footer component. Copyright: © 2026 WiseAnalytics.
+   This also overrides the existing .footer class from style.css
+   to adopt WiseAnalytics brand tokens — non-destructively.
+   ========================================================================== */
+
+/* ======================================================================
+   GLOBAL FOOTER OVERRIDE
+   Remaps the existing .footer class (from style.css) to WA tokens.
+   The layout and positioning are preserved; only visual values change.
+   ====================================================================== */
+
+.slide-container .footer {
+    font-family: var(--wa-font-body);
+    border-top-color: var(--wa-border-color);
+    background-color: transparent;
+}
+.slide-container .footer .footer-brand {
+    color: var(--wa-gray-500);
+    font-size: var(--wa-text-footnote);
+    font-weight: var(--wa-weight-semibold);
+}
+.slide-container .footer .footer-url-inline {
+    color: var(--wa-gray-400);
+    font-weight: var(--wa-weight-regular);
+}
+.slide-container .footer .footer-sep {
+    color: var(--wa-gray-300);
+    margin: 0 var(--wa-space-2);
+}
+.slide-container .footer .footer-page {
+    color: var(--wa-gray-600);
+    font-size: var(--wa-text-body-sm);
+    font-weight: var(--wa-weight-bold);
+    font-family: var(--wa-font-heading);
+}
+
+/* Dark slide footer overrides (purple/dark slides) */
+.slide-container [class*="-footer"] .footer-brand,
+.slide-container [class*="-footer"] .footer-url-inline,
+.slide-container [class*="-footer"] .footer-sep,
+.slide-container [class*="-footer"] .footer-page {
+    font-family: var(--wa-font-body);
+}
+
+/* ======================================================================
+   WA FOOTER COMPONENT
+   Standalone footer for new slides or theme preview pages.
+   Usage: <footer class="wa-footer"> ... </footer>
+   ====================================================================== */
+
+.wa-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 72px;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: var(--wa-space-8);
+    padding: 0 var(--wa-slide-padding-x);
+    border-top: var(--wa-border-width) solid var(--wa-border-color);
+    background-color: transparent;
+    z-index: var(--wa-z-overlay);
+    font-family: var(--wa-font-body);
+}
+
+/* --- Logo (left) --- */
+.wa-footer__logo {
+    display: flex;
+    align-items: center;
+    gap: var(--wa-space-2);
+    flex-shrink: 0;
+}
+.wa-footer__logo-mark {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+.wa-footer__logo-name {
+    font-size: var(--wa-text-footnote);
+    font-weight: var(--wa-weight-extrabold);
+    color: var(--wa-primary);
+    letter-spacing: var(--wa-tracking-tight);
+    white-space: nowrap;
+}
+
+/* --- Presentation name (center-left) --- */
+.wa-footer__name {
+    font-size: var(--wa-text-footnote);
+    font-weight: var(--wa-weight-semibold);
+    color: var(--wa-gray-500);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* --- Copyright (center-right) --- */
+.wa-footer__copyright {
+    font-size: var(--wa-text-footnote);
+    font-weight: var(--wa-weight-regular);
+    color: var(--wa-gray-400);
+    white-space: nowrap;
+    /* Content set via CSS so it's centrally managed */
+}
+/* The copyright string is injected via ::after so updating 
+   --wa-brand-copyright in variables.css updates it everywhere. */
+.wa-footer__copyright-text::after {
+    content: '© 2026 WiseAnalytics.';
+    font-size: var(--wa-text-footnote);
+    color: var(--wa-gray-400);
+}
+
+/* --- Confidential label --- */
+.wa-footer__confidential {
+    font-size: var(--wa-text-label);
+    font-weight: var(--wa-weight-bold);
+    color: var(--wa-gray-400);
+    text-transform: uppercase;
+    letter-spacing: var(--wa-tracking-widest);
+    white-space: nowrap;
+}
+
+/* --- Slide number (right) --- */
+.wa-footer__slide-number {
+    font-size: var(--wa-text-body-sm);
+    font-weight: var(--wa-weight-bold);
+    color: var(--wa-primary);
+    font-family: var(--wa-font-heading);
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 28px;
+    text-align: right;
+}
+
+/* ======================================================================
+   FOOTER VARIANTS
+   ====================================================================== */
+
+/* Light (default) */
+.wa-footer--light {
+    background-color: var(--wa-white);
+    border-top-color: var(--wa-border-color);
+}
+
+/* Dark */
+.wa-footer--dark {
+    background-color: var(--wa-gray-900);
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+.wa-footer--dark .wa-footer__logo-name     { color: var(--wa-primary-300); }
+.wa-footer--dark .wa-footer__name          { color: rgba(255, 255, 255, 0.5); }
+.wa-footer--dark .wa-footer__copyright-text::after { color: rgba(255, 255, 255, 0.4); }
+.wa-footer--dark .wa-footer__confidential  { color: rgba(255, 255, 255, 0.35); }
+.wa-footer--dark .wa-footer__slide-number  { color: var(--wa-primary-300); }
+
+/* Primary (purple bg) */
+.wa-footer--primary {
+    background-color: var(--wa-primary-700);
+    border-top-color: rgba(255, 255, 255, 0.15);
+}
+.wa-footer--primary .wa-footer__logo-name     { color: var(--wa-white); }
+.wa-footer--primary .wa-footer__name          { color: rgba(255, 255, 255, 0.6); }
+.wa-footer--primary .wa-footer__copyright-text::after { color: rgba(255, 255, 255, 0.55); }
+.wa-footer--primary .wa-footer__confidential  { color: rgba(255, 255, 255, 0.45); }
+.wa-footer--primary .wa-footer__slide-number  { color: var(--wa-white); }
+
+/* Transparent (for slides where the footer floats over content) */
+.wa-footer--transparent {
+    background-color: transparent;
+    border-top-color: transparent;
+}
+
+/* ======================================================================
+   SLIDE NUMBER — STANDALONE COMPONENT
+   Can be used anywhere on a slide.
+   ====================================================================== */
+
+.wa-slide-number {
+    font-family: var(--wa-font-heading);
+    font-size: var(--wa-text-body-sm);
+    font-weight: var(--wa-weight-bold);
+    color: var(--wa-primary);
+    line-height: 1;
+}
+.wa-slide-number--muted {
+    color: var(--wa-gray-400);
+}
+.wa-slide-number--white {
+    color: rgba(255, 255, 255, 0.65);
+}
+.wa-slide-number--with-total::after {
+    content: attr(data-total);
+    font-weight: var(--wa-weight-regular);
+    color: var(--wa-gray-400);
+    margin-left: 2px;
+}
+
+/* ======================================================================
+   COPYRIGHT LINE — STANDALONE
+   For use at the bottom of thank-you or closing slides.
+   ====================================================================== */
+
+.wa-copyright {
+    font-family: var(--wa-font-body);
+    font-size: var(--wa-text-label);
+    color: var(--wa-gray-400);
+    font-weight: var(--wa-weight-regular);
+}
+.wa-copyright--white {
+    color: rgba(255, 255, 255, 0.45);
+}

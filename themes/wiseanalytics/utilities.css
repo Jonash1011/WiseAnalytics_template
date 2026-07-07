@@ -1,0 +1,228 @@
+/* ==========================================================================
+   WISEANALYTICS DESIGN SYSTEM — UTILITIES
+   Helper classes, layout primitives, display utilities,
+   and slide metadata annotation selectors.
+   ========================================================================== */
+
+/* ======================================================================
+   DISPLAY
+   ====================================================================== */
+.wa-block        { display: block          !important; }
+.wa-inline       { display: inline         !important; }
+.wa-inline-block { display: inline-block   !important; }
+.wa-hidden       { display: none           !important; }
+
+/* ======================================================================
+   FLEXBOX
+   ====================================================================== */
+.wa-flex         { display: flex           !important; }
+.wa-inline-flex  { display: inline-flex    !important; }
+.wa-flex-col     { flex-direction: column  !important; }
+.wa-flex-row     { flex-direction: row     !important; }
+.wa-flex-wrap    { flex-wrap: wrap         !important; }
+.wa-flex-nowrap  { flex-wrap: nowrap       !important; }
+
+.wa-items-start   { align-items: flex-start  !important; }
+.wa-items-center  { align-items: center      !important; }
+.wa-items-end     { align-items: flex-end    !important; }
+.wa-items-stretch { align-items: stretch     !important; }
+
+.wa-justify-start   { justify-content: flex-start    !important; }
+.wa-justify-center  { justify-content: center        !important; }
+.wa-justify-end     { justify-content: flex-end      !important; }
+.wa-justify-between { justify-content: space-between !important; }
+.wa-justify-around  { justify-content: space-around  !important; }
+
+.wa-flex-1    { flex: 1 !important; }
+.wa-flex-none { flex: none !important; }
+.wa-flex-shrink-0 { flex-shrink: 0 !important; }
+
+/* ======================================================================
+   GRID
+   ====================================================================== */
+.wa-grid    { display: grid !important; }
+.wa-grid-2  { display: grid; grid-template-columns: repeat(2, 1fr) !important; }
+.wa-grid-3  { display: grid; grid-template-columns: repeat(3, 1fr) !important; }
+.wa-grid-4  { display: grid; grid-template-columns: repeat(4, 1fr) !important; }
+.wa-grid-5  { display: grid; grid-template-columns: repeat(5, 1fr) !important; }
+
+/* ======================================================================
+   TEXT ALIGNMENT
+   ====================================================================== */
+.wa-text-left    { text-align: left    !important; }
+.wa-text-center  { text-align: center  !important; }
+.wa-text-right   { text-align: right   !important; }
+
+/* ======================================================================
+   OVERFLOW
+   ====================================================================== */
+.wa-overflow-hidden { overflow: hidden !important; }
+.wa-overflow-auto   { overflow: auto   !important; }
+
+/* ======================================================================
+   POSITION
+   ====================================================================== */
+.wa-relative { position: relative !important; }
+.wa-absolute { position: absolute !important; }
+
+/* ======================================================================
+   ACCENT BAR OVERRIDE
+   Replaces the existing .accent-bar from style.css with WA gradient
+   ====================================================================== */
+.accent-bar {
+    background: linear-gradient(90deg, var(--wa-primary), var(--wa-secondary));
+    border-radius: var(--wa-radius-full);
+}
+
+/* ======================================================================
+   GRADIENT OVERLAYS (for dark/image slides)
+   ====================================================================== */
+.wa-overlay-dark {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.65) 35%, transparent 100%);
+    z-index: 2;
+}
+.wa-overlay-primary {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+        rgba(135, 0, 218, 0.85) 0%,
+        rgba(22, 47, 204, 0.75) 100%
+    );
+    z-index: 2;
+}
+.wa-overlay-gradient {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+        rgba(255,255,255,0.3) 40%,
+        transparent 100%
+    );
+    z-index: 2;
+}
+
+/* ======================================================================
+   DECORATIVE STRIPE PATTERN
+   Reusable alternative to the Accenture diagonal stripe pattern
+   ====================================================================== */
+.wa-stripes {
+    position: absolute;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 2px,
+        var(--wa-primary-100) 2px,
+        var(--wa-primary-100) 3px
+    );
+    z-index: 1;
+}
+
+/* ======================================================================
+   SLIDE METADATA ANNOTATIONS
+   data-* attributes for machine-readable slide metadata.
+   These selectors allow theme/context-aware styling
+   without touching HTML structure.
+   ====================================================================== */
+
+/* Theme applied indicator */
+[data-wa-theme="wiseanalytics"] {
+    /* Applied — all WA variables are active */
+}
+
+/* Dark mode slides */
+[data-wa-bg="dark"] {
+    background-color: var(--wa-gray-900);
+}
+[data-wa-bg="primary"] {
+    background-color: var(--wa-primary);
+}
+[data-wa-bg="secondary"] {
+    background-color: var(--wa-secondary);
+}
+[data-wa-bg="light"] {
+    background-color: var(--wa-white);
+}
+
+/* Footer variant selector */
+[data-wa-footer="dark"] .wa-footer {
+    background-color: transparent;
+    border-top-color: rgba(255, 255, 255, 0.1);
+}
+[data-wa-footer="dark"] .wa-footer__logo-name,
+[data-wa-footer="dark"] .wa-footer__slide-number {
+    color: var(--wa-primary-300);
+}
+[data-wa-footer="dark"] .wa-footer__name,
+[data-wa-footer="dark"] .wa-footer__copyright-text::after,
+[data-wa-footer="dark"] .wa-footer__confidential {
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* Header variant selector */
+[data-wa-header="dark"] .wa-header {
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+[data-wa-header="dark"] .wa-header__logo-name {
+    color: var(--wa-primary-300);
+}
+[data-wa-header="dark"] .wa-header__title {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ======================================================================
+   LOGO COMPONENT
+   ====================================================================== */
+.wa-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--wa-space-2);
+    text-decoration: none;
+    line-height: 1;
+}
+.wa-logo img,
+.wa-logo svg {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+.wa-logo__text {
+    font-family: var(--wa-font-heading);
+    font-size: var(--wa-text-body-md);
+    font-weight: var(--wa-weight-extrabold);
+    color: var(--wa-primary);
+    letter-spacing: var(--wa-tracking-tight);
+    white-space: nowrap;
+}
+/* Size variants */
+.wa-logo--sm img, .wa-logo--sm svg { height: 22px; }
+.wa-logo--sm .wa-logo__text { font-size: var(--wa-text-body-sm); }
+.wa-logo--lg img, .wa-logo--lg svg { height: 48px; }
+.wa-logo--lg .wa-logo__text { font-size: var(--wa-text-h4); }
+/* On dark backgrounds */
+.wa-logo--on-dark .wa-logo__text { color: var(--wa-white); }
+
+/* ======================================================================
+   TRANSITION / ANIMATION UTILITIES
+   ====================================================================== */
+.wa-transition        { transition: all var(--wa-transition-base); }
+.wa-transition-fast   { transition: all var(--wa-transition-fast); }
+.wa-transition-slow   { transition: all var(--wa-transition-slow); }
+.wa-hover-lift:hover  { transform: translateY(-2px); box-shadow: var(--wa-shadow-lg); }
+.wa-hover-glow:hover  { box-shadow: 0 0 20px rgba(135, 0, 218, 0.3); }
+
+/* ======================================================================
+   PRINT / EXPORT OVERRIDES
+   ====================================================================== */
+@media print {
+    .slide-container {
+        box-shadow: none;
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    body {
+        background-color: white;
+        flex-direction: column;
+        overflow: visible;
+    }
+}

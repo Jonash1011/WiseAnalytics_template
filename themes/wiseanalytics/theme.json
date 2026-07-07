@@ -1,0 +1,159 @@
+{
+  "name": "WiseAnalytics",
+  "version": "1.0.0",
+  "description": "Official presentation design system theme for WiseAnalytics",
+  "website": "https://www.wiseanalytics.com/",
+  "entryPoint": "theme.css",
+  "copyright": "© 2026 WiseAnalytics.",
+
+  "colors": {
+    "primary": "#8700DA",
+    "primary-light": "#CC80FF",
+    "primary-dark": "#510083",
+    "secondary": "#162FCC",
+    "secondary-light": "#8FA1FF",
+    "secondary-dark": "#0C1C7A",
+    "white": "#FFFFFF",
+    "black": "#000000",
+    "gray-50": "#FAFAFA",
+    "gray-100": "#F4F4F4",
+    "gray-200": "#E8E8E8",
+    "gray-400": "#BDBDBD",
+    "gray-700": "#4A4A4A",
+    "gray-900": "#141414",
+    "success": "#12A654",
+    "warning": "#E6A817",
+    "error": "#D63B3B",
+    "info": "#1671C4"
+  },
+
+  "typography": {
+    "headingFont": "Inter",
+    "bodyFont": "Inter",
+    "monoFont": "JetBrains Mono",
+    "fontSource": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap",
+    "scale": {
+      "display":   "88px",
+      "h1":        "72px",
+      "h2":        "48px",
+      "h3":        "36px",
+      "h4":        "24px",
+      "body-lg":   "18px",
+      "body-md":   "16px",
+      "body-sm":   "14px",
+      "caption":   "13px",
+      "footnote":  "12px",
+      "label":     "11px"
+    },
+    "weights": {
+      "regular":   400,
+      "medium":    500,
+      "semibold":  600,
+      "bold":      700,
+      "extrabold": 800,
+      "black":     900
+    }
+  },
+
+  "spacing": {
+    "base": "4px",
+    "slideWidth":    "1280px",
+    "slideHeight":   "720px",
+    "slidePaddingX": "60px",
+    "slidePaddingY": "80px"
+  },
+
+  "borderRadius": {
+    "none": "0px",
+    "xs":   "3px",
+    "sm":   "6px",
+    "md":   "12px",
+    "lg":   "18px",
+    "xl":   "24px",
+    "full": "9999px"
+  },
+
+  "shadows": {
+    "sm": "0 1px 3px rgba(135,0,218,0.08), 0 1px 2px rgba(0,0,0,0.06)",
+    "md": "0 4px 12px rgba(135,0,218,0.12), 0 2px 4px rgba(0,0,0,0.08)",
+    "lg": "0 10px 30px rgba(135,0,218,0.16), 0 4px 8px rgba(0,0,0,0.10)",
+    "xl": "0 20px 50px rgba(135,0,218,0.22), 0 8px 16px rgba(0,0,0,0.12)"
+  },
+
+  "files": [
+    { "file": "variables.css",  "role": "Design Tokens (CSS Custom Properties)" },
+    { "file": "colors.css",     "role": "Color Palette & Semantic Classes" },
+    { "file": "typography.css", "role": "Type Scale & Font Declarations" },
+    { "file": "spacing.css",    "role": "Spacing, Radius, Shadow Utilities" },
+    { "file": "components.css", "role": "Full Component Library" },
+    { "file": "header.css",     "role": "Header Component" },
+    { "file": "footer.css",     "role": "Footer Component (© 2026 WiseAnalytics.)" },
+    { "file": "utilities.css",  "role": "Layout Helpers & Metadata Annotations" },
+    { "file": "theme.css",      "role": "Master Entry Point" }
+  ],
+
+  "components": [
+    "Buttons (Primary, Secondary, Outline, Ghost)",
+    "Cards (Base, Info, Stat, KPI, Dark, Feature)",
+    "Table (Standard, Striped, Blue Header)",
+    "Timeline (Vertical, Horizontal)",
+    "Process Steps",
+    "Infographic Blocks",
+    "Section Divider",
+    "Quote Box (Light, Dark)",
+    "Callouts (Primary, Secondary, Info, Success, Warning, Error)",
+    "Badges (Primary, Secondary, Light, Outline, Gray, Dark, Semantic)",
+    "Tags",
+    "Highlight Box (Light, Primary, Secondary, Dark)",
+    "Icon Circle (sizes: sm, base, lg; variants: primary, secondary, dark)",
+    "Image Placeholder / Container",
+    "Chart Container",
+    "List (Bullet, Checkmark, Numbered)",
+    "Comparison Layout",
+    "Logo Component",
+    "Header (Light, Dark, Primary, Transparent)",
+    "Footer (Light, Dark, Primary, Transparent)",
+    "Slide Badge",
+    "Slide Number",
+    "Copyright Line",
+    "Accent Bar",
+    "Gradient Overlays",
+    "Stripe Decoration"
+  ],
+
+  "slideLibrary": {
+    "totalSlides": 17,
+    "categories": {
+      "title": 1,
+      "statement": 5,
+      "section_divider": 2,
+      "two_column": 3,
+      "kpi": 1,
+      "three_column": 2,
+      "case_study": 1,
+      "agenda": 1,
+      "thank_you": 1
+    }
+  },
+
+  "darkModeSupported": true,
+  "darkModeToggle": "Set data-theme='dark' on <html> element",
+
+  "usage": {
+    "applyTheme": "Add <link rel='stylesheet' href='themes/wiseanalytics/theme.css'> after style.css",
+    "enableDarkMode": "<html data-theme='dark'>",
+    "enableLightMode": "<html data-theme='light'>",
+    "addFooter": "<footer class='wa-footer'><div class='wa-footer__logo'>...</div><span class='wa-footer__name'>...</span><span class='wa-footer__copyright-text'></span><span class='wa-footer__slide-number'>01</span></footer>",
+    "addHeader": "<header class='wa-header'><div class='wa-header__logo'>...</div><span class='wa-header__title'>...</span><span class='wa-header__section-pill'>Section</span></header>"
+  },
+
+  "metadata": {
+    "themeApplied": "wiseanalytics",
+    "accentColor": "#8700DA",
+    "secondaryColor": "#162FCC",
+    "logoFile": "logo/logo.svg",
+    "footerCopyright": "© 2026 WiseAnalytics.",
+    "createdAt": "2026-07-07",
+    "compatibleWith": ["Presentation HTML/CSS", "Single-slide exports", "Full deck viewer"]
+  }
+}

@@ -1,0 +1,131 @@
+/* ==========================================================================
+   WISEANALYTICS DESIGN SYSTEM — SPACING
+   Spacing utilities, sizing helpers, and layout primitives.
+   All values reference variables.css tokens.
+   ========================================================================== */
+
+/* ======================================================================
+   MARGIN UTILITIES
+   ====================================================================== */
+.wa-m-0  { margin: var(--wa-space-0)  !important; }
+.wa-m-1  { margin: var(--wa-space-1)  !important; }
+.wa-m-2  { margin: var(--wa-space-2)  !important; }
+.wa-m-3  { margin: var(--wa-space-3)  !important; }
+.wa-m-4  { margin: var(--wa-space-4)  !important; }
+.wa-m-6  { margin: var(--wa-space-6)  !important; }
+.wa-m-8  { margin: var(--wa-space-8)  !important; }
+.wa-m-10 { margin: var(--wa-space-10) !important; }
+
+.wa-mt-0  { margin-top: var(--wa-space-0)  !important; }
+.wa-mt-2  { margin-top: var(--wa-space-2)  !important; }
+.wa-mt-4  { margin-top: var(--wa-space-4)  !important; }
+.wa-mt-6  { margin-top: var(--wa-space-6)  !important; }
+.wa-mt-8  { margin-top: var(--wa-space-8)  !important; }
+.wa-mt-10 { margin-top: var(--wa-space-10) !important; }
+.wa-mt-12 { margin-top: var(--wa-space-12) !important; }
+.wa-mt-16 { margin-top: var(--wa-space-16) !important; }
+
+.wa-mb-0  { margin-bottom: var(--wa-space-0)  !important; }
+.wa-mb-2  { margin-bottom: var(--wa-space-2)  !important; }
+.wa-mb-4  { margin-bottom: var(--wa-space-4)  !important; }
+.wa-mb-6  { margin-bottom: var(--wa-space-6)  !important; }
+.wa-mb-8  { margin-bottom: var(--wa-space-8)  !important; }
+.wa-mb-10 { margin-bottom: var(--wa-space-10) !important; }
+.wa-mb-12 { margin-bottom: var(--wa-space-12) !important; }
+.wa-mb-16 { margin-bottom: var(--wa-space-16) !important; }
+
+.wa-ml-0  { margin-left: var(--wa-space-0)  !important; }
+.wa-ml-4  { margin-left: var(--wa-space-4)  !important; }
+.wa-ml-6  { margin-left: var(--wa-space-6)  !important; }
+.wa-ml-8  { margin-left: var(--wa-space-8)  !important; }
+
+.wa-mr-0  { margin-right: var(--wa-space-0)  !important; }
+.wa-mr-4  { margin-right: var(--wa-space-4)  !important; }
+.wa-mr-6  { margin-right: var(--wa-space-6)  !important; }
+.wa-mr-8  { margin-right: var(--wa-space-8)  !important; }
+
+/* ======================================================================
+   PADDING UTILITIES
+   ====================================================================== */
+.wa-p-0  { padding: var(--wa-space-0)  !important; }
+.wa-p-2  { padding: var(--wa-space-2)  !important; }
+.wa-p-4  { padding: var(--wa-space-4)  !important; }
+.wa-p-6  { padding: var(--wa-space-6)  !important; }
+.wa-p-8  { padding: var(--wa-space-8)  !important; }
+.wa-p-10 { padding: var(--wa-space-10) !important; }
+.wa-p-12 { padding: var(--wa-space-12) !important; }
+
+.wa-px-4  { padding-left: var(--wa-space-4);  padding-right: var(--wa-space-4);  }
+.wa-px-6  { padding-left: var(--wa-space-6);  padding-right: var(--wa-space-6);  }
+.wa-px-8  { padding-left: var(--wa-space-8);  padding-right: var(--wa-space-8);  }
+.wa-px-10 { padding-left: var(--wa-space-10); padding-right: var(--wa-space-10); }
+.wa-px-15 { padding-left: var(--wa-space-15); padding-right: var(--wa-space-15); }
+
+.wa-py-2  { padding-top: var(--wa-space-2);  padding-bottom: var(--wa-space-2);  }
+.wa-py-4  { padding-top: var(--wa-space-4);  padding-bottom: var(--wa-space-4);  }
+.wa-py-6  { padding-top: var(--wa-space-6);  padding-bottom: var(--wa-space-6);  }
+.wa-py-8  { padding-top: var(--wa-space-8);  padding-bottom: var(--wa-space-8);  }
+.wa-py-10 { padding-top: var(--wa-space-10); padding-bottom: var(--wa-space-10); }
+.wa-py-12 { padding-top: var(--wa-space-12); padding-bottom: var(--wa-space-12); }
+.wa-py-20 { padding-top: var(--wa-space-20); padding-bottom: var(--wa-space-20); }
+
+/* ======================================================================
+   GAP UTILITIES (for flex/grid)
+   ====================================================================== */
+.wa-gap-2  { gap: var(--wa-space-2)  !important; }
+.wa-gap-4  { gap: var(--wa-space-4)  !important; }
+.wa-gap-6  { gap: var(--wa-space-6)  !important; }
+.wa-gap-8  { gap: var(--wa-space-8)  !important; }
+.wa-gap-10 { gap: var(--wa-space-10) !important; }
+.wa-gap-12 { gap: var(--wa-space-12) !important; }
+.wa-gap-15 { gap: var(--wa-space-15) !important; }
+
+/* ======================================================================
+   BORDER RADIUS UTILITIES
+   ====================================================================== */
+.wa-rounded-none { border-radius: var(--wa-radius-none) !important; }
+.wa-rounded-xs   { border-radius: var(--wa-radius-xs)   !important; }
+.wa-rounded-sm   { border-radius: var(--wa-radius-sm)   !important; }
+.wa-rounded-md   { border-radius: var(--wa-radius-md)   !important; }
+.wa-rounded-lg   { border-radius: var(--wa-radius-lg)   !important; }
+.wa-rounded-xl   { border-radius: var(--wa-radius-xl)   !important; }
+.wa-rounded-full { border-radius: var(--wa-radius-full) !important; }
+
+/* ======================================================================
+   SHADOW UTILITIES
+   ====================================================================== */
+.wa-shadow-none { box-shadow: none                !important; }
+.wa-shadow-sm   { box-shadow: var(--wa-shadow-sm) !important; }
+.wa-shadow-md   { box-shadow: var(--wa-shadow-md) !important; }
+.wa-shadow-lg   { box-shadow: var(--wa-shadow-lg) !important; }
+.wa-shadow-xl   { box-shadow: var(--wa-shadow-xl) !important; }
+
+/* ======================================================================
+   WIDTH / HEIGHT UTILITIES
+   ====================================================================== */
+.wa-w-full  { width: 100%  !important; }
+.wa-w-half  { width: 50%   !important; }
+.wa-w-third { width: 33.333% !important; }
+.wa-w-auto  { width: auto  !important; }
+
+.wa-h-full  { height: 100% !important; }
+.wa-h-auto  { height: auto !important; }
+
+/* ======================================================================
+   BORDER UTILITIES
+   ====================================================================== */
+.wa-border    { border: var(--wa-border-width) solid var(--wa-border-color) !important; }
+.wa-border-t  { border-top: var(--wa-border-width) solid var(--wa-border-color) !important; }
+.wa-border-b  { border-bottom: var(--wa-border-width) solid var(--wa-border-color) !important; }
+.wa-border-l  { border-left: var(--wa-border-width) solid var(--wa-border-color) !important; }
+.wa-border-r  { border-right: var(--wa-border-width) solid var(--wa-border-color) !important; }
+
+.wa-border-accent-l {
+    border-left: var(--wa-border-width-lg) solid var(--wa-primary) !important;
+    padding-left: var(--wa-space-4) !important;
+}
+
+.wa-border-secondary-l {
+    border-left: var(--wa-border-width-lg) solid var(--wa-secondary) !important;
+    padding-left: var(--wa-space-4) !important;
+}

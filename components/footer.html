@@ -1,0 +1,71 @@
+<!--
+  ============================================================
+  WISEANALYTICS — SHARED FOOTER COMPONENT REFERENCE
+  File: components/footer.html
+
+  This is the canonical markup for the WiseAnalytics slide footer.
+  Copy this snippet into any slide. Adjust the slide-number
+  data attribute per slide. Use the correct logo path relative
+  to the HTML file that includes this footer.
+
+  Logo path (from root index.html):    logo.png
+  CSS path  (from root index.html):    components/footer.css
+  ============================================================
+-->
+
+<!-- ┌─────────────────────────────────────────────────────────┐
+     │  STANDARD FOOTER (light slides — white/grey bg)        │
+     └─────────────────────────────────────────────────────────┘ -->
+<div class="wa-slide-footer">
+
+    <!-- LEFT: Logo + website -->
+    <div class="wa-slide-footer__left">
+        <img
+            class="wa-slide-footer__logo"
+            src="logo.png"
+            alt="WiseAnalytics"
+            draggable="false"
+        >
+        <span class="wa-slide-footer__url">Wiseanalytics.com</span>
+    </div>
+
+    <!-- RIGHT: Copyright -->
+    <div class="wa-slide-footer__right">
+        <span class="wa-slide-footer__copyright">Copyright &copy; 2025 Wiseanalytics.</span>
+    </div>
+
+</div>
+
+
+<!-- ┌─────────────────────────────────────────────────────────┐
+     │  DARK VARIANT (purple / dark-background slides)        │
+     │  Add class: wa-slide-footer--dark                      │
+     └─────────────────────────────────────────────────────────┘ -->
+<!--
+<div class="wa-slide-footer wa-slide-footer--dark">
+    <div class="wa-slide-footer__left">
+        <img class="wa-slide-footer__logo" src="logo.png" alt="WiseAnalytics" draggable="false">
+        <span class="wa-slide-footer__url">Wiseanalytics.com</span>
+    </div>
+    <div class="wa-slide-footer__right">
+        <span class="wa-slide-footer__copyright">Copyright &copy; 2025 Wiseanalytics.</span>
+    </div>
+</div>
+-->
+
+
+<!-- ┌─────────────────────────────────────────────────────────┐
+     │  TRANSPARENT VARIANT (full-bleed image/gradient slides)│
+     │  Add class: wa-slide-footer--transparent               │
+     └─────────────────────────────────────────────────────────┘ -->
+<!--
+<div class="wa-slide-footer wa-slide-footer--transparent">
+    <div class="wa-slide-footer__left">
+        <img class="wa-slide-footer__logo" src="logo.png" alt="WiseAnalytics" draggable="false">
+        <span class="wa-slide-footer__url">Wiseanalytics.com</span>
+    </div>
+    <div class="wa-slide-footer__right">
+        <span class="wa-slide-footer__copyright">Copyright &copy; 2025 Wiseanalytics.</span>
+    </div>
+</div>
+-->

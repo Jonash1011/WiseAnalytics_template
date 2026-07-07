@@ -1,0 +1,157 @@
+/* ==========================================================================
+   WISEANALYTICS — SHARED FOOTER COMPONENT
+   File: components/footer.css
+   
+   Usage: Add class="wa-slide-footer" to the footer div inside each slide.
+   Logo path: ../logo.png  (relative from components/ folder)
+             OR  logo.png  (relative from root index.html)
+   ========================================================================== */
+
+/* ------------------------------------------------------------------
+   FOOTER SHELL
+   Position: absolute, pinned to the bottom of each .slide-container
+------------------------------------------------------------------ */
+.wa-slide-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    /* Layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    /* Sizing */
+    height: 72px;
+    padding: 0 40px;
+
+    /* Appearance */
+    background-color: #FFFFFF;
+    border-top: 1px solid #EAEAEA;
+
+    /* Stacking */
+    z-index: 20;
+
+    /* Typography baseline */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+/* ------------------------------------------------------------------
+   LEFT SIDE: Logo + website URL
+------------------------------------------------------------------ */
+.wa-slide-footer__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.wa-slide-footer__logo {
+    height: 36px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    /* Preserve aspect ratio — never stretch */
+    flex-shrink: 0;
+}
+
+.wa-slide-footer__url {
+    font-size: 13px;
+    font-weight: 600;
+    color: #000000;
+    text-decoration: none;
+    letter-spacing: 0;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+/* ------------------------------------------------------------------
+   RIGHT SIDE: Copyright
+------------------------------------------------------------------ */
+.wa-slide-footer__right {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.wa-slide-footer__copyright {
+    font-size: 13px;
+    font-weight: 400;
+    color: #000000;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+/* ------------------------------------------------------------------
+   DARK VARIANT
+   Use on purple / dark-background slides.
+   Add class: wa-slide-footer--dark
+------------------------------------------------------------------ */
+.wa-slide-footer--dark {
+    background-color: transparent;
+    border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.wa-slide-footer--dark .wa-slide-footer__url,
+.wa-slide-footer--dark .wa-slide-footer__copyright {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+/* ------------------------------------------------------------------
+   TRANSPARENT VARIANT
+   Use when the footer floats over a full-bleed background.
+   Add class: wa-slide-footer--transparent
+------------------------------------------------------------------ */
+.wa-slide-footer--transparent {
+    background-color: transparent;
+    border-top-color: transparent;
+}
+
+/* ------------------------------------------------------------------
+   RESPONSIVE
+   Slides are fixed 1280×720px but the component also works
+   in responsive/web contexts.
+------------------------------------------------------------------ */
+
+/* Tablet: maintain spacing */
+@media (max-width: 900px) {
+    .wa-slide-footer {
+        padding: 0 24px;
+        height: 64px;
+    }
+
+    .wa-slide-footer__logo {
+        height: 28px;
+    }
+
+    .wa-slide-footer__url,
+    .wa-slide-footer__copyright {
+        font-size: 12px;
+    }
+}
+
+/* Mobile: allow wrapping */
+@media (max-width: 600px) {
+    .wa-slide-footer {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 12px 20px;
+        gap: 8px;
+    }
+
+    .wa-slide-footer__left {
+        gap: 8px;
+    }
+
+    .wa-slide-footer__logo {
+        height: 24px;
+    }
+
+    .wa-slide-footer__url,
+    .wa-slide-footer__copyright {
+        font-size: 11px;
+    }
+}
