@@ -49,6 +49,12 @@
    This completes the rebrand without touching style.css.
    ========================================================================== */
 
+/* --- Remove all footer top borders globally --- */
+.slide-container .footer,
+.cover-footer {
+    border-top: none !important;
+}
+
 /* --- Hardcoded purple accent overrides (Accenture → WiseAnalytics) --- */
 
 /* Slides 6 & 7: column titles and stat numbers used deep purple hex values */

@@ -1,4 +1,4 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    ACCENTURE TECHVISION 2020 - PRESENTATION DESIGN SYSTEM
    ========================================================================== */
 
@@ -231,9 +231,7 @@ p.subtitle {
 }
 .s13-badge {
     position: absolute; top: 32px; left: 40px;
-    background-color: rgba(255,255,255,0.18); color: #fff;
-    font-size: 13px; font-weight: 700; padding: 8px 18px;
-    z-index: 20;
+    font-size: 13px; font-weight: 700;    z-index: 20;
 }
 .s13-hashtag {
     position: absolute; top: 36px; right: 50px;
@@ -274,9 +272,7 @@ p.subtitle {
 }
 .s14-badge {
     position: absolute; top: 32px; left: 40px;
-    background-color: var(--accent-purple); color: #fff;
-    font-size: 13px; font-weight: 700; padding: 8px 18px;
-    z-index: 20;
+    font-size: 13px; font-weight: 700;    z-index: 20;
 }
 .s14-hashtag {
     position: absolute; top: 36px; right: 50px;
@@ -330,9 +326,7 @@ p.subtitle {
 }
 .s15-badge {
     position: absolute; top: 32px; left: 40px;
-    background-color: var(--accent-purple); color: #fff;
-    font-size: 13px; font-weight: 700; padding: 8px 18px;
-    z-index: 20;
+    font-size: 13px; font-weight: 700;    z-index: 20;
 }
 .s15-hashtag {
     position: absolute; top: 36px; right: 50px;
@@ -529,9 +523,7 @@ p.subtitle {
 }
 .s9-badge {
     position: absolute; top: 32px; left: 40px;
-    background-color: #2a2a2a; color: #fff;
-    font-size: 13px; font-weight: 700; padding: 8px 18px;
-    z-index: 20; letter-spacing: 0.2px;
+    font-size: 13px; font-weight: 700;    z-index: 20; letter-spacing: 0.2px;
 }
 .s9-hashtag {
     position: absolute; top: 36px; right: 50px;
@@ -569,9 +561,7 @@ p.subtitle {
 }
 .s10-badge {
     position: absolute; top: 32px; left: 40px;
-    background-color: var(--accent-purple); color: #fff;
-    font-size: 13px; font-weight: 700; padding: 8px 18px;
-    z-index: 20;
+    font-size: 13px; font-weight: 700;    z-index: 20;
 }
 .s10-hashtag {
     position: absolute; top: 36px; right: 50px;
@@ -649,9 +639,7 @@ p.subtitle {
 }
 .s11-badge {
     position: absolute; top: 32px; left: 40px;
-    background-color: var(--accent-purple); color: #fff;
-    font-size: 13px; font-weight: 700; padding: 8px 18px;
-    z-index: 20;
+    font-size: 13px; font-weight: 700;    z-index: 20;
 }
 .s11-hashtag {
     position: absolute; top: 36px; right: 50px;
@@ -723,9 +711,7 @@ p.subtitle {
 }
 .s12-badge {
     position: absolute; top: 32px; left: 40px;
-    background-color: var(--accent-purple); color: #fff;
-    font-size: 13px; font-weight: 700; padding: 8px 18px;
-    z-index: 20;
+    font-size: 13px; font-weight: 700;    z-index: 20;
 }
 .s12-hashtag {
     position: absolute; top: 36px; right: 50px;
@@ -793,10 +779,7 @@ p.subtitle {
 .s5-badge {
     position: absolute;
     top: 32px; left: 40px;
-    background-color: #2a2a2a;
-    color: #fff;
     font-size: 13px; font-weight: 700;
-    padding: 8px 18px;
     z-index: 20; letter-spacing: 0.2px;
 }
 .s5-hashtag {
@@ -835,10 +818,7 @@ p.subtitle {
 .s6-badge {
     position: absolute;
     top: 32px; left: 40px;
-    background-color: rgba(255,255,255,0.18);
-    color: #fff;
     font-size: 13px; font-weight: 700;
-    padding: 8px 18px;
     z-index: 20; letter-spacing: 0.2px;
 }
 .s6-hashtag {
@@ -894,10 +874,7 @@ p.subtitle {
 .s7-badge {
     position: absolute;
     top: 32px; left: 40px;
-    background-color: rgba(255,255,255,0.18);
-    color: #fff;
     font-size: 13px; font-weight: 700;
-    padding: 8px 18px;
     z-index: 20; letter-spacing: 0.2px;
 }
 .s7-hashtag {
@@ -958,10 +935,7 @@ p.subtitle {
 .s8-badge {
     position: absolute;
     top: 32px; left: 40px;
-    background-color: var(--accent-purple);
-    color: #fff;
     font-size: 13px; font-weight: 700;
-    padding: 8px 18px;
     z-index: 20; letter-spacing: 0.2px;
 }
 .s8-hashtag {
@@ -1027,11 +1001,8 @@ p.subtitle {
     position: absolute;
     top: 32px;
     left: 40px;
-    background-color: var(--accent-purple);
-    color: #fff;
     font-size: 13px;
     font-weight: 700;
-    padding: 8px 18px;
     z-index: 20;
     letter-spacing: 0.2px;
 }
@@ -1090,11 +1061,8 @@ p.subtitle {
     position: absolute;
     top: 32px;
     left: 40px;
-    background-color: #2a2a2a;
-    color: #ffffff;
     font-size: 13px;
     font-weight: 700;
-    padding: 8px 18px;
     z-index: 20;
     letter-spacing: 0.2px;
 }
@@ -1218,11 +1186,8 @@ p.subtitle {
     position: absolute;
     top: 32px;
     left: 40px;
-    background-color: var(--accent-purple);
-    color: #fff;
     font-size: 13px;
     font-weight: 700;
-    padding: 8px 18px;
     z-index: 20;
     letter-spacing: 0.2px;
 }
@@ -1457,4 +1422,172 @@ p.subtitle {
 }
 .slide-dark .footer { 
     border-top-color: rgba(255,255,255,0.1); 
+}
+
+/* ==========================================================================
+   SLIDE BADGE — CENTRALIZED THEME SYSTEM
+   Added as part of the "remove colored badge box" update.
+
+   Tokens:
+     --badge-color       : text color of the badge label
+     --badge-bg          : background (always transparent — box removed)
+     --badge-border      : subtle separator (optional, off by default)
+
+   Rule:
+     Light slide background  →  badge text = black  (#000000)
+     Dark  slide background  →  badge text = white  (#FFFFFF)
+
+   No hardcoded per-slide color declarations.
+   To change a slide, change its .slide-sN rule below.
+   ========================================================================== */
+
+/* ── GLOBAL DEFAULTS ─────────────────────────────────────────────────────── */
+:root {
+    --badge-color-on-light: #000000;
+    --badge-color-on-dark:  #FFFFFF;
+}
+
+/* ── BASE: apply to every slide badge ───────────────────────────────────── */
+[class*="-badge"] {
+    background:    transparent !important;
+    background-color: transparent !important;
+    border:        none !important;
+    box-shadow:    none !important;
+    padding:       0 !important;
+    color:         var(--slide-badge-color, #000000);
+}
+
+/* ── LIGHT SLIDES (white / grey / light-gradient backgrounds) ────────────
+   Slides: s4, s8, s10, s11, s12, s14, s15
+   Badge text = black
+   ─────────────────────────────────────────────────────────────────────── */
+.slide-s4  { --slide-badge-color: var(--badge-color-on-light); }
+.slide-s8  { --slide-badge-color: var(--badge-color-on-light); }
+.slide-s10 { --slide-badge-color: var(--badge-color-on-light); }
+.slide-s11 { --slide-badge-color: var(--badge-color-on-light); }
+.slide-s12 { --slide-badge-color: var(--badge-color-on-light); }
+.slide-s14 { --slide-badge-color: var(--badge-color-on-light); }
+.slide-s15 { --slide-badge-color: var(--badge-color-on-light); }
+
+/* ── DARK SLIDES (black / purple / dark-navy backgrounds) ───────────────
+   Slides: s3, s5, s6, s7, s9, s13, s16
+   Badge text = white
+   ─────────────────────────────────────────────────────────────────────── */
+.slide-s3  { --slide-badge-color: var(--badge-color-on-dark); }
+.slide-s5  { --slide-badge-color: var(--badge-color-on-dark); }
+.slide-s6  { --slide-badge-color: var(--badge-color-on-dark); }
+.slide-s7  { --slide-badge-color: var(--badge-color-on-dark); }
+.slide-s9  { --slide-badge-color: var(--badge-color-on-dark); }
+.slide-s13 { --slide-badge-color: var(--badge-color-on-dark); }
+.slide-s16 { --slide-badge-color: var(--badge-color-on-dark); }
+
+/* ── COVER SLIDE ─────────────────────────────────────────────────────────
+   The cover has no .sN-badge element (uses cover-logo instead).
+   The cover-eyebrow sits on the dark right panel.
+   ─────────────────────────────────────────────────────────────────────── */
+.slide-cover { --slide-badge-color: var(--badge-color-on-dark); }
+
+/* ==========================================================================
+   SLIDE HASHTAG — CENTRALIZED THEME SYSTEM
+   The #TECHVISION2020 top-right labels follow the same light/dark rule.
+   ========================================================================== */
+
+[class*="-hashtag"] {
+    color: var(--slide-badge-color, #000000);
+}
+
+/* Override: slides where hashtag is already correct via badge token above —
+   no extra rules needed. The cascade handles it. */
+
+/* ==========================================================================
+   FOOTER SLIDE — Full dedicated slide (replaces per-slide footer bars)
+   Slide class: .slide-footer-slide
+   Layout: horizontal split, logo left — contact/copyright right
+   Background: white  |  Text: black  |  Accent: WA primary purple
+   ========================================================================== */
+
+.slide-footer-slide {
+    background-color: #FFFFFF;
+    flex-direction: row;
+    align-items: stretch;
+    position: relative;
+}
+
+/* ── LEFT PANEL: Logo + tagline ─────────────────────────────────────────── */
+.footer-slide__left {
+    width: 50%;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 70px 80px 80px;
+    background-color: #FAFAFA;
+    border-right: 1px solid #EAEAEA;
+    position: relative;
+}
+
+/* Accent line at top of left panel */
+.footer-slide__left::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--wa-primary, #8700DA), var(--wa-secondary, #162FCC));
+}
+
+.footer-slide__logo {
+    height: 56px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+    margin-bottom: 32px;
+}
+
+.footer-slide__tagline {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: #4A4A4A;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 380px;
+}
+
+/* ── CENTER DIVIDER ──────────────────────────────────────────────────────── */
+.footer-slide__divider {
+    display: none; /* handled by border-right on __left */
+}
+
+/* ── RIGHT PANEL: URL + copyright ───────────────────────────────────────── */
+.footer-slide__right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 80px 80px 70px;
+    gap: 12px;
+}
+
+.footer-slide__url {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--wa-primary, #8700DA);
+    margin: 0 0 8px 0;
+    letter-spacing: -0.3px;
+}
+
+.footer-slide__copyright {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
+    margin: 0;
+    line-height: 1.5;
 }
