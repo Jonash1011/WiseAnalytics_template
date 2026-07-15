@@ -1,0 +1,18 @@
+/* ==========================================================================
+   AGENDA.CSS — Agenda / icon grid slides (agenda_001)
+   ========================================================================== */
+
+/* ── AGENDA_001 ─ Full purple, 5-column icon grid with dividers (S16) ─────── */
+.slide-s16 { background-color: #A100FF; position: relative; }
+.s16-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #fff; z-index: 20; letter-spacing: 0.5px; }
+.s16-content  { position: absolute; top: 60px; left: 60px; right: 60px; bottom: 85px; display: flex; flex-direction: column; z-index: 5; }
+.s16-title    { font-size: 44px; font-weight: 800; color: #fff; margin: 0 0 8px 0; }
+.s16-subtitle { font-size: 20px; font-weight: 700; color: var(--accent-purple); background-color: #fff; display: inline-block; padding: 2px 0; margin: 0 0 50px 0; }
+.s16-grid     { display: flex; flex: 1; align-items: flex-start; gap: 0; }
+.s16-item     { flex: 1; padding: 0 24px 0 0; }
+.s16-icon     { font-size: 36px; color: #fff; margin-bottom: 14px; line-height: 1; }
+.s16-item-title { font-size: 16px; font-weight: 800; color: #fff; margin: 0 0 10px 0; line-height: 1.3; }
+.s16-item-body  { font-size: 13px; line-height: 1.6; color: rgba(255,255,255,0.85); margin: 0; }
+.s16-divider    { width: 1px; background-color: rgba(255,255,255,0.3); align-self: stretch; margin: 0 24px 0 0; flex-shrink: 0; }
+.s16-footer { border-top-color: rgba(255,255,255,0.2) !important; }
+.s16-footer .footer-brand, .s16-footer .footer-url-inline, .s16-footer .footer-sep, .s16-footer .footer-page { color: rgba(255,255,255,0.6) !important; }

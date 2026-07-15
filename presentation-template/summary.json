@@ -1,0 +1,14 @@
+{
+  "cover":        3,
+  "hero":         4,
+  "two_column":   6,
+  "content":      4,
+  "three_column": 2,
+  "statistics":   1,
+  "agenda":       1,
+  "process":      1,
+  "quote":        1,
+  "team":         1,
+  "thank_you":    1,
+  "_total":       25
+}

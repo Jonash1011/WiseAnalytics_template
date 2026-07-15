@@ -1,0 +1,84 @@
+/* ==========================================================================
+   TWO_COLUMN.CSS — Two-column layout slides (two_column_001 – two_column_006)
+   ========================================================================== */
+
+/* ── TWO_COLUMN_001 ─ Full purple bg, headline + 2-col People/Gov text (S6) ─ */
+.slide-s6 { background-color: #A100FF; position: relative; }
+.s6-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; letter-spacing: 0.2px; }
+.s6-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #fff; z-index: 20; letter-spacing: 0.5px; }
+.s6-content  { position: absolute; top: 90px; left: 60px; right: 60px; bottom: 85px; display: flex; flex-direction: column; justify-content: space-between; z-index: 5; }
+.s6-headline { font-size: 38px; font-weight: 800; color: #fff; line-height: 1.2; margin: 0 0 40px 0; max-width: 900px; }
+.s6-cols     { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.s6-col-title { font-size: 24px; font-weight: 800; color: #4a0080; margin-bottom: 12px; }
+.s6-col-body  { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.9); margin: 0; }
+.s6-footer { border-top-color: rgba(255,255,255,0.2) !important; }
+.s6-footer .footer-brand, .s6-footer .footer-url-inline, .s6-footer .footer-sep, .s6-footer .footer-page { color: rgba(255,255,255,0.6) !important; }
+
+/* ── TWO_COLUMN_002 ─ White bg, stacked rects left, purple headline right (S8) ─ */
+.slide-s8 { background-color: #fff; flex-direction: row; }
+.s8-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; letter-spacing: 0.2px; }
+.s8-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #222; z-index: 20; letter-spacing: 0.5px; }
+.s8-left     { position: relative; width: 40%; height: 100%; background-color: #f5f5f5; flex-shrink: 0; overflow: hidden; }
+.s8-rect     { position: absolute; border-radius: 2px; }
+.s8-rect-1   { width: 220px; height: 340px; background: linear-gradient(135deg,rgba(161,0,255,0.25),rgba(100,0,180,0.15)); top: 100px; left: 20px;  transform: rotate(-7deg); }
+.s8-rect-2   { width: 220px; height: 340px; background: linear-gradient(135deg,rgba(161,0,255,0.18),rgba(80,0,160,0.10));  top: 130px; left: 95px;  transform: rotate(-1deg); }
+.s8-rect-3   { width: 220px; height: 340px; background: linear-gradient(135deg,rgba(161,0,255,0.12),rgba(60,0,140,0.07));  top: 160px; left: 170px; transform: rotate(5deg);  }
+.s8-right    { flex: 1; height: 100%; background-color: #fff; display: flex; flex-direction: column; justify-content: center; padding: 80px 60px 100px 70px; }
+.s8-headline { font-size: 38px; font-weight: 800; color: var(--accent-purple); line-height: 1.25; margin: 0; }
+
+/* ── TWO_COLUMN_003 ─ White, gray rects+dots left, purple headline+body right (S11) ─ */
+.slide-s11 { background-color: #fff; flex-direction: row; position: relative; }
+.s11-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; letter-spacing: 0.2px; }
+.s11-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #222; z-index: 20; letter-spacing: 0.5px; }
+.s11-left     { position: relative; width: 44%; height: 100%; flex-shrink: 0; background-color: #f8f8f8; overflow: hidden; }
+.s11-rect     { position: absolute; border-radius: 2px; }
+.s11-rect-1   { width: 220px; height: 360px; background-color: rgba(200,200,200,0.30); top: 70px;  left: 20px;  transform: rotate(-8deg); }
+.s11-rect-2   { width: 220px; height: 360px; background-color: rgba(180,180,180,0.20); top: 100px; left: 100px; transform: rotate(-1deg); }
+.s11-rect-3   { width: 220px; height: 360px; background-color: rgba(160,160,160,0.12); top: 130px; left: 180px; transform: rotate(6deg);  }
+.s11-dots     { position: absolute; bottom: 95px; left: 30px; display: flex; gap: 8px; flex-wrap: wrap; max-width: 200px; z-index: 10; }
+.s11-dot      { width: 8px; height: 8px; border-radius: 50%; background-color: rgba(0,0,0,0.18); display: inline-block; }
+.s11-dot-active { background-color: rgba(0,0,0,0.5); }
+.s11-right    { flex: 1; height: 100%; background-color: #fff; display: flex; flex-direction: column; justify-content: center; padding: 80px 60px 100px 60px; }
+.s11-headline { font-size: 42px; font-weight: 800; color: var(--accent-purple); line-height: 1.2; margin: 0 0 24px 0; }
+.s11-body     { font-size: 16px; line-height: 1.7; color: #333; margin: 0; max-width: 480px; }
+
+/* ── TWO_COLUMN_004 ─ White, purple headline+body left, deco rects right (S12) ─ */
+.slide-s12 { background-color: #fff; flex-direction: row; position: relative; }
+.s12-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; letter-spacing: 0.2px; }
+.s12-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #222; z-index: 20; letter-spacing: 0.5px; }
+.s12-left     { position: relative; width: 56%; height: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; padding: 90px 50px 90px 60px; z-index: 5; }
+.s12-headline { font-size: 38px; font-weight: 800; color: var(--accent-purple); line-height: 1.2; margin: 0 0 24px 0; }
+.s12-body     { font-size: 14px; line-height: 1.7; color: #333; margin: 0; }
+.s12-right    { flex: 1; height: 100%; background-color: #f5f5f5; position: relative; overflow: hidden; }
+.s12-rect     { position: absolute; border-radius: 2px; }
+.s12-rect-1   { width: 200px; height: 320px; background-color: rgba(210,210,210,0.45); top: 90px;  left: 20px;  transform: rotate(-6deg); }
+.s12-rect-2   { width: 200px; height: 320px; background-color: rgba(190,190,190,0.30); top: 120px; left: 95px;  transform: rotate(1deg);  }
+.s12-rect-3   { width: 200px; height: 320px; background-color: rgba(170,170,170,0.18); top: 150px; left: 170px; transform: rotate(7deg);  }
+
+/* ── TWO_COLUMN_005 ─ White, purple headline left + case study right (S14) ─ */
+.slide-s14 { background-color: #fff; flex-direction: row; position: relative; }
+.s14-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; }
+.s14-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #222; z-index: 20; letter-spacing: 0.5px; }
+.s14-stripes  { position: absolute; bottom: 55px; left: -60px; width: 320px; height: 220px; background: repeating-linear-gradient(45deg,transparent,transparent 1.5px,#d3d3d3 1.5px,#d3d3d3 2.5px); z-index: 1; }
+.s14-left     { position: relative; width: 52%; height: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; padding: 90px 50px 90px 60px; z-index: 5; }
+.s14-headline { font-size: 34px; font-weight: 800; color: var(--accent-purple); line-height: 1.25; margin: 0; }
+.s14-right    { flex: 1; height: 100%; display: flex; flex-direction: column; justify-content: center; padding: 90px 60px 90px 50px; border-left: 1px solid #eee; }
+.s14-case-title { font-size: 20px; font-weight: 800; color: #111; margin: 0 0 16px 0; }
+.s14-case-body  { font-size: 14px; line-height: 1.7; color: #333; margin: 0; }
+
+/* ── TWO_COLUMN_006 ─ Image left + title+2-col text right (slides2/ Slide 2) ─ */
+.slide-p2-s2 { display: flex; flex-direction: row; width: 100%; height: 100%; }
+.slide-p2-s2 .slide-left  { flex: 0 0 36%; background: #1a0030; display: flex; flex-direction: column; position: relative; }
+.slide-p2-s2 .image-placeholder { flex: 1; background: #2d1040; }
+.slide-p2-s2 .slide-footer { padding: 2.5% 4%; background: #1a0030; }
+.slide-p2-s2 .copyright   { color: #fff; font-size: clamp(0.45rem,0.85vw,0.6rem); font-weight: 400; }
+.slide-p2-s2 .slide-right { flex: 1; background: #fff; display: flex; flex-direction: column; padding: 4% 5% 5% 5%; }
+.slide-p2-s2 .slide-header { margin-bottom: 4%; }
+.slide-p2-s2 .category-label { color: #7700c0; font-size: clamp(0.6rem,1.1vw,0.78rem); font-weight: 400; font-style: italic; }
+.slide-p2-s2 .slide-main  { display: flex; flex-direction: column; flex: 1; }
+.slide-p2-s2 .slide-title { font-size: clamp(1.6rem,4vw,2.65rem); font-weight: 800; color: #5500a0; line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 5%; }
+.slide-p2-s2 .content-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 5%; flex: 1; }
+.slide-p2-s2 .column      { display: flex; flex-direction: column; gap: 3%; }
+.slide-p2-s2 .body-bold   { font-size: clamp(0.5rem,0.9vw,0.65rem); font-weight: 700; color: #111; line-height: 1.6; }
+.slide-p2-s2 .body-regular{ font-size: clamp(0.5rem,0.9vw,0.65rem); font-weight: 400; color: #111; line-height: 1.6; }
+.slide-p2-s2 .text-link   { color: #5500a0; text-decoration: underline; font-weight: 700; }

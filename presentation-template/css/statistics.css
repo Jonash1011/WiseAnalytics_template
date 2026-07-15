@@ -1,0 +1,16 @@
+/* ==========================================================================
+   STATISTICS.CSS — KPI / statistics slides (statistics_001)
+   ========================================================================== */
+
+/* ── STATISTICS_001 ─ Full purple, headline + 2 large KPI numbers (S7) ───── */
+.slide-s7 { background-color: #A100FF; position: relative; }
+.s7-badge     { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; letter-spacing: 0.2px; }
+.s7-hashtag   { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #fff; z-index: 20; letter-spacing: 0.5px; }
+.s7-content   { position: absolute; top: 90px; left: 60px; right: 60px; bottom: 85px; display: flex; flex-direction: column; justify-content: space-between; z-index: 5; }
+.s7-headline  { font-size: 38px; font-weight: 800; color: #fff; line-height: 1.2; margin: 0 0 36px 0; max-width: 900px; }
+.s7-stats     { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.s7-stat-number { font-size: 58px; font-weight: 800; color: #2d0060; line-height: 1; margin-bottom: 14px; }
+.s7-stat-body   { font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.92); margin: 0 0 10px 0; }
+.s7-stat-cite   { font-size: 11px; line-height: 1.4; color: rgba(255,255,255,0.55); margin: 0; }
+.s7-footer { border-top-color: rgba(255,255,255,0.2) !important; }
+.s7-footer .footer-brand, .s7-footer .footer-url-inline, .s7-footer .footer-sep, .s7-footer .footer-page { color: rgba(255,255,255,0.6) !important; }

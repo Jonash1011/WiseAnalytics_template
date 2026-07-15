@@ -1,0 +1,21 @@
+/* ==========================================================================
+   THANK_YOU.CSS — Closing / Thank You slides (thank_you_001)
+   ========================================================================== */
+
+/* ── THANK_YOU_001 ─ Light teal gradient, large "Thank you" + stacked rects (S17) ─ */
+.slide-s17 {
+    background: linear-gradient(120deg, #b8eaf5 0%, #d4f5fc 40%, #e8fafe 70%, #f0fbff 100%);
+    position: relative; overflow: hidden;
+    flex-direction: row;
+}
+.s17-overlay { position: absolute; inset: 0; background: linear-gradient(to right, rgba(255,255,255,0.3) 45%, transparent 100%); z-index: 2; }
+.s17-deco    { position: absolute; right: 80px; top: 60px; bottom: 60px; width: 42%; z-index: 3; }
+.s17-rect    { position: absolute; border-radius: 2px; }
+.s17-rect-1  { width: 260px; height: 420px; background-color: rgba(255,255,255,0.50); top: 30px;  right: 0;    transform: rotate(-4deg); }
+.s17-rect-2  { width: 260px; height: 420px; background-color: rgba(255,255,255,0.35); top: 60px;  right: 70px; transform: rotate(1deg);  }
+.s17-rect-3  { width: 260px; height: 420px; background-color: rgba(255,255,255,0.20); top: 90px;  right: 140px; transform: rotate(5deg); }
+.s17-content { position: absolute; left: 60px; top: 50%; transform: translateY(-55%); z-index: 10; }
+.s17-thankyou { font-size: 90px; font-weight: 800; color: var(--accent-purple); line-height: 1; margin: 0 0 30px 0; }
+.s17-hashtag-text { font-size: 16px; font-weight: 800; color: #111; margin: 0 0 8px 0; }
+.s17-link    { font-size: 16px; font-weight: 700; color: #111; margin: 0; text-decoration: underline; }
+.s17-copyright { position: absolute; bottom: 24px; left: 60px; font-size: 11px; color: #555; z-index: 10; }

@@ -1,0 +1,60 @@
+/* ==========================================================================
+   TEAM.CSS — Team introduction slides (team_001)
+   ========================================================================== */
+
+/* ── TEAM_001 ─ Full purple radial bg, 3-member grid + LinkedIn links (slides2/ S7) ─ */
+.slide-p2-s7 {
+    background: radial-gradient(ellipse at 55% 45%,
+        #c040e8 0%, #a020d0 20%, #8800c0 40%,
+        #6600aa 60%, #4a0090 80%, #350070 100%);
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 100%;
+}
+.slide-p2-s7 .slide-inner {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column;
+    padding: 6% 6% 5% 6%;
+    position: relative;
+}
+.slide-p2-s7 .team-heading {
+    font-size: clamp(0.9rem,2vw,1.35rem);
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 4%;
+    letter-spacing: 0.01em;
+}
+.slide-p2-s7 .team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4%;
+    margin-bottom: auto;
+}
+.slide-p2-s7 .team-member { display: flex; flex-direction: column; gap: 0.4em; }
+.slide-p2-s7 .member-name {
+    font-size: clamp(0.55rem,1.05vw,0.75rem);
+    font-weight: 700; color: #fff; line-height: 1.3;
+}
+.slide-p2-s7 .member-role {
+    font-size: clamp(0.48rem,0.9vw,0.64rem);
+    font-weight: 400; color: #fff; line-height: 1.5; margin-bottom: 0.5em;
+}
+.slide-p2-s7 .linkedin-link {
+    display: inline-flex; align-items: center; gap: 0.4em;
+    color: #a0c8ff;
+    font-size: clamp(0.48rem,0.9vw,0.64rem);
+    font-weight: 400; text-decoration: underline; text-underline-offset: 2px;
+}
+.slide-p2-s7 .linkedin-link:hover { color: #c8e0ff; }
+.slide-p2-s7 .linkedin-icon {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: clamp(14px,1.5vw,20px); height: clamp(14px,1.5vw,20px);
+    background: #0a66c2; border-radius: 3px; flex-shrink: 0;
+}
+.slide-p2-s7 .linkedin-icon svg { width: 65%; height: 65%; fill: #fff; }
+.slide-p2-s7 .team-footer { margin-top: auto; display: flex; flex-direction: column; gap: 0.8em; }
+.slide-p2-s7 .team-copyright {
+    font-size: clamp(0.42rem,0.78vw,0.56rem);
+    font-weight: 400; color: #fff; line-height: 1.6;
+}

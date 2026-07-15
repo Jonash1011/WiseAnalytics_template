@@ -1,0 +1,62 @@
+/* ==========================================================================
+   CONTENT.CSS — Content / body text slides (content_001 – content_004)
+   ========================================================================== */
+
+/* ── CONTENT_001 ─ Dark navy full-bleed, white headline + body left (S9) ─── */
+.slide-s9 {
+    background: linear-gradient(120deg, #0a0f1e 0%, #0c1535 50%, #12082a 100%);
+    position: relative; overflow: hidden;
+}
+.s9-overlay  { position: absolute; inset: 0; background: linear-gradient(to right, rgba(0,0,0,0.6) 38%, transparent 100%); z-index: 2; }
+.s9-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; letter-spacing: 0.2px; }
+.s9-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #fff; z-index: 20; letter-spacing: 0.5px; }
+.s9-content  { position: absolute; bottom: 110px; left: 60px; max-width: 500px; z-index: 10; }
+.s9-headline { font-size: 44px; font-weight: 800; color: #fff; line-height: 1.15; margin: 0 0 24px 0; }
+.s9-body     { font-size: 15px; line-height: 1.65; color: rgba(255,255,255,0.82); margin: 0; }
+.s9-footer { border-top-color: rgba(255,255,255,0.12) !important; }
+.s9-footer .footer-brand, .s9-footer .footer-url-inline, .s9-footer .footer-sep, .s9-footer .footer-page { color: rgba(255,255,255,0.6) !important; }
+
+/* ── CONTENT_002 ─ White, purple headline+bullets left, deco rects right (S10) ─ */
+.slide-s10 { background-color: #fff; flex-direction: row; position: relative; }
+.s10-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; }
+.s10-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #222; z-index: 20; letter-spacing: 0.5px; }
+.s10-stripes  { position: absolute; top: -60px; left: -60px; width: 240px; height: 240px; background: repeating-linear-gradient(45deg,transparent,transparent 1.5px,#d3d3d3 1.5px,#d3d3d3 2.5px); z-index: 1; }
+.s10-left     { position: relative; width: 58%; height: 100%; flex-shrink: 0; display: flex; flex-direction: column; justify-content: center; padding: 90px 50px 90px 60px; z-index: 5; }
+.s10-headline { font-size: 36px; font-weight: 800; color: var(--accent-purple); line-height: 1.2; margin: 0 0 20px 0; }
+.s10-body     { font-size: 14px; line-height: 1.65; color: #333; margin: 0 0 24px 0; }
+.s10-bullets  { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+.s10-bullet   { font-size: 13px; line-height: 1.6; color: #333; border-left: 3px solid var(--accent-purple); padding-left: 12px; }
+.s10-right    { flex: 1; height: 100%; background-color: #f0f0f0; position: relative; overflow: hidden; }
+.s10-rect     { position: absolute; border-radius: 2px; }
+.s10-rect-1   { width: 200px; height: 320px; background-color: rgba(200,200,200,0.5);  top: 80px;  right: 100px; transform: rotate(-6deg); }
+.s10-rect-2   { width: 200px; height: 320px; background-color: rgba(180,180,180,0.35); top: 110px; right: 30px;  transform: rotate(0deg);  }
+.s10-rect-3   { width: 200px; height: 320px; background-color: rgba(160,160,160,0.2);  top: 140px; right: -40px; transform: rotate(6deg);  }
+
+/* ── CONTENT_003 ─ Full purple, large white headline + long body (S13) ────── */
+.slide-s13 { background-color: #A100FF; position: relative; }
+.s13-badge    { position: absolute; top: 32px; left: 40px; font-size: 13px; font-weight: 700; z-index: 20; }
+.s13-hashtag  { position: absolute; top: 36px; right: 50px; font-size: 13px; font-weight: 700; color: #fff; z-index: 20; letter-spacing: 0.5px; }
+.s13-content  { position: absolute; top: 90px; left: 60px; right: 60px; bottom: 85px; display: flex; flex-direction: column; justify-content: center; z-index: 5; }
+.s13-headline { font-size: 44px; font-weight: 800; color: #fff; line-height: 1.2; margin: 0 0 32px 0; max-width: 900px; }
+.s13-body     { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.88); margin: 0; max-width: 680px; }
+.s13-footer { border-top-color: rgba(255,255,255,0.2) !important; }
+.s13-footer .footer-brand, .s13-footer .footer-url-inline, .s13-footer .footer-sep, .s13-footer .footer-page { color: rgba(255,255,255,0.6) !important; }
+
+/* ── CONTENT_004 ─ White, dense 2+2 col text (slides2/ Slide 5) ──────────── */
+.slide-p2-s5 { display: flex; flex-direction: row; width: 100%; height: 100%; }
+.slide-p2-s5 .slide-left  { flex: 0 0 64%; background: #fff; display: flex; flex-direction: column; padding: 3.5% 4.5% 2% 4.5%; }
+.slide-p2-s5 .slide-header { margin-bottom: 2%; }
+.slide-p2-s5 .category-label { color: #7700c0; font-size: clamp(0.55rem,1vw,0.72rem); font-weight: 400; font-style: italic; }
+.slide-p2-s5 .slide-main  { flex: 1; display: flex; flex-direction: column; gap: 2%; overflow: hidden; }
+.slide-p2-s5 .intro-section { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto auto; gap: 1.5% 4%; margin-bottom: 1.5%; }
+.slide-p2-s5 .intro-bold   { font-size: clamp(0.46rem,0.84vw,0.6rem); font-weight: 700; color: #111; line-height: 1.6; grid-column: 1; grid-row: 1; }
+.slide-p2-s5 .indent-top   { grid-column: 2; grid-row: 1 / span 2; align-self: start; }
+.slide-p2-s5 .body-regular { font-size: clamp(0.44rem,0.82vw,0.58rem); font-weight: 400; color: #111; line-height: 1.65; }
+.slide-p2-s5 .content-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 4%; flex: 1; overflow: hidden; }
+.slide-p2-s5 .column      { display: flex; flex-direction: column; gap: 2.5%; }
+.slide-p2-s5 .text-block  { display: flex; flex-direction: column; gap: 0.35em; }
+.slide-p2-s5 .block-heading { font-size: clamp(0.46rem,0.84vw,0.6rem); font-weight: 700; color: #111; line-height: 1.4; }
+.slide-p2-s5 .slide-footer { padding-top: 1.5%; }
+.slide-p2-s5 .copyright   { color: #333; font-size: clamp(0.4rem,0.72vw,0.52rem); font-weight: 400; }
+.slide-p2-s5 .slide-right { flex: 1; background: #0a0a1a; display: flex; }
+.slide-p2-s5 .image-placeholder { width: 100%; height: 100%; background: #0d0d25; }
